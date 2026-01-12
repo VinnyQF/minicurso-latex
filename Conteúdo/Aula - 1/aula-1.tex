@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\author{Vinícius Queiroz Fonseca}
+\date{14 de Janeiro de 2025}
+\title{Documento de Exemplo - \LaTeX}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Isso é uma seção:}
+
+Para o \LaTeX, seções são numeradas automaticamente. Elas contém um título maior que as subseções e subsubseções. \\
+
+Quem determina a ordem de numeração é o chamado do comando ``$\backslash$section \{\}'', ou seja, qualquer seção que for criada após uma seção original será numerada em ordem crescente.
+
+\section{Exemplo de uma nova seção:}
+
+Como pode ser observado, essa seção já apresenta a numeração correta.
+
+\subsection{Isso é uma subseção:}
+
+Subseções seguem o mesmo princípio de funcionamento, iterando em 0.1 em sequência à última seção conhecida. Elas podem ser chamadas pelo comando ``$\backslash$subsection\{\}''.
+
+\subsubsection{Isso é uma subsubseção:}
+
+Por fim. Nós temos as subsubseções, que são iteradas em 0.0.1, em sequência à uma última seção ou subseção conhecida. Normalmente subsubseções são precedidas de uma seção, mas isso não necessariamente é algo obrigatório. Elas podem ser chamadas pelo comando ``$\backslash$subsection\{\}''
+
+\paragraph{Isso é um parágrafo:}
+
+\begin{itemize}
+	\item Esses são items pontuados
+	\item Podem existir quantos pontos forem necessários
+\end{itemize}
+
+
+\end{document}

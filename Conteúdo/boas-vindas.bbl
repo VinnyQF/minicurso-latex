@@ -1,0 +1,57 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[{Equipe abnTeX2} 2025]{abntex2}
+\abntrefinfo{{Equipe abnTeX2}}{{Equipe abnTeX2}}{2025}
+{{Equipe abnTeX2}. \emph{abnTeX2: Classe \LaTeX{} compatível com as normas da
+  ABNT}. 2025.
+Disponível em: \url{https://www.abntex.net.br/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://www.abntex.net.br/}.}
+
+\bibitem[{LearnLaTeX.org} 2025]{learnlatex}
+\abntrefinfo{{LearnLaTeX.org}}{{LearnLaTeX.org}}{2025}
+{{LearnLaTeX.org}. \emph{Learn LaTeX}. 2025.
+Disponível em: \url{https://www.learnlatex.org/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://www.learnlatex.org/}.}
+
+\bibitem[{Overleaf Project Ltd.} 2025]{overleaf}
+\abntrefinfo{{Overleaf Project Ltd.}}{{Overleaf Project Ltd.}}{2025}
+{{Overleaf Project Ltd.} \emph{Overleaf: Online LaTeX Editor}. 2025.
+Disponível em: \url{https://www.overleaf.com/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://www.overleaf.com/}.}
+
+\bibitem[{Sociedade Brasileira de Computação} 2025]{sbc-template}
+\abntrefinfo{{Sociedade Brasileira de Computação}}{{Sociedade Brasileira de
+  Computação}}{2025}
+{{Sociedade Brasileira de Computação}. \emph{SBC Conferences Template –
+  updated sbc-template.sty v2017}. 2025.
+Disponível em:
+  \url{https://www.overleaf.com/latex/templates/sbc-conferences-template-updated-sbc-template-dot-sty-v2017/pyhttxftxjqn}.
+  Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em:
+  \url{https://www.overleaf.com/latex/templates/sbc-conferences-template-updated-sbc-template-dot-sty-v2017/pyhttxftxjqn}.}
+
+\bibitem[{TeX Users Group} 2025]{texlive}
+\abntrefinfo{{TeX Users Group}}{{TeX Users Group}}{2025}
+{{TeX Users Group}. \emph{TeX Live: TeX Users Group TeX Distribution}. 2025.
+Disponível em: \url{https://www.tug.org/texlive/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://www.tug.org/texlive/}.}
+
+\bibitem[{Texlyre Contributors} 2025]{texlyre}
+\abntrefinfo{{Texlyre Contributors}}{{Texlyre Contributors}}{2025}
+{{Texlyre Contributors}. \emph{Texlyre: Ferramenta Online para LaTeX}. 2025.
+Disponível em: \url{https://texlyre.github.io/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://texlyre.github.io/}.}
+
+\bibitem[{TeXstudio Development Team} 2025]{texstudio}
+\abntrefinfo{{TeXstudio Development Team}}{{TeXstudio Development Team}}{2025}
+{{TeXstudio Development Team}. \emph{TeXstudio: Integrated Writing Environment
+  for \LaTeX{}}. 2025.
+Disponível em: \url{https://www.texstudio.org/}. Acesso em: 12 jan. 2026.
+Dispon{\'\i}vel em: \url{https://www.texstudio.org/}.}
+
+\end{thebibliography}

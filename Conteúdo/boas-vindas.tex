@@ -1,0 +1,133 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{abntex2cite}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{inconsolata}
+\usepackage{lmodern}
+
+\setlist[itemize]{itemsep=0.4em}
+
+
+\geometry{
+	a4paper,
+	left=3cm,
+	right=2cm,
+	top=3cm,
+	bottom=2cm
+}
+
+
+
+\author{Vinícius Queiroz Fonseca}
+\date{14 de Janeiro de 2026}
+\title{Documento de Boas Vindas - LaTeX}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{titlesec}
+
+
+% Configurações da Capa
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\centering
+		
+		\includegraphics[width=5cm]{IMAGENS/LOGO.png}
+		
+		\vspace{1cm}
+		
+		{\large \@author\par}
+		
+		\vfill
+		
+		{\LARGE\bfseries \@title\par}
+		
+		\vfill
+		
+		{\large \@date\par}
+		
+	\end{titlepage}
+}
+\makeatother
+% --- 
+
+% - Ambiente Textual
+\begin{document}
+	\justifying
+	
+	\maketitle
+	
+	\section*{Documento de Referência}
+	
+	Esse é um documento preparado com a intenção de organizar as atividades da disciplina do curso de férias. Para o nosso primeiro encontro, é essencial que estejam explicados alguns básicos relacionados ao LaTeX:
+	
+	\begin{itemize}
+		\item O que é o LaTeX?
+		\begin{itemize}
+			\item De modo geral, o LaTeX pode ser entendido como uma linguagem de programação que é capaz de criar documentos compilados diretamente para PDF ou outro formato de arquivo.
+		\end{itemize}
+		\item Onde eu construo um documento?
+		\begin{itemize}
+			\item Você pode escolher um compilador local em conjunto com um editor de texto. 
+			
+			 Ex: Texlive \cite{texlive} + Texstudio \cite{texstudio}
+			
+			\item Outra opção é um compilador on-line com sua IDE integrada. 
+			
+			Ex: Overleaf \cite{overleaf} ou Texlyre \cite{texlyre}.
+		\end{itemize}
+		\item Quais recursos eu posso usar para aprender além do que estiver presente nesse material?
+		\begin{itemize}
+			\item Um possível recurso é o website LearnLaTeX, onde existem tutoriais do funcionamento básico ao avançado da linguagem LaTeX \cite{learnlatex}.
+			\item Existem tutoriais no YouTube que podem explicar o funcionamento básico da linguagem.
+		\end{itemize}
+	\item Por que utilizar essa linguagem em vez de um processador de textos convencional, como o Word ou o LibreOffice Writer?
+	\begin{itemize}
+		\item O LaTeX proporciona uma experiência mais consistente do que editores de texto convencionais, pois o processo de formatação é separado do conteúdo textual. 
+		
+		Isso garante que o mesmo documento possa ser compilado com exatamente o mesmo formato em diferentes ambientes. 
+		
+		Além disso, o gerenciamento de citações e referências é superior, uma vez que esse processo é automatizado e centralizado em um único arquivo BibTeX.
+	\end{itemize}
+
+	\end{itemize}
+	
+
+	
+    Com esses elementos em mente, vamos dar continuidade para explicar a estrutura geral dos nossos encontros:
+	
+	\subsection*{Aula 1 - Dia 14/01/2026:}
+	
+\begin{itemize}
+	\item A primeira aula será parcialmente expositiva, com uma apresentação de slides a respeito do histórico da linguagem LaTeX.
+	\item Em sequência, será elaborado um documento básico em tempo real, com um processo de tirada de dúvidas ao longo do caminho.
+	\item Por fim, será solicitado um documento de maior complexidade como atividade, que deverá ser enviado por e-mail para avaliação e retorno na aula seguinte.
+\end{itemize}
+
+	
+	
+	\subsection*{Aula 2 - Dia 21/01/2026:}
+	
+\begin{itemize}
+	\item A segunda aula irá explorar conceitos mais avançados da linguagem LaTeX.
+	\item Serão abordados o funcionamento dos pacotes adicionais e o gerenciamento de referências bibliográficas.
+	\item Também será apresentada uma introdução ao desenvolvimento de documentos utilizando a classe \texttt{abntex2} \cite{abntex2}, seguindo a formatação ABNT.
+	\item Por fim, será discutido o uso do template da revista SBC \cite{sbc-template} utilizado nos Trabalhos de Conclusão de Curso dos cursos de Computação da instituição.
+\end{itemize}
+
+	
+	\bibliographystyle{abntex2-alf}
+	\bibliography{boas-vindas}
+	
+\end{document}
+% --- 
+
