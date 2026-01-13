@@ -1,5 +1,6 @@
 \documentclass{article}
 
+% Pacotes usados para construção do documento
 \usepackage{geometry}
 \usepackage{microtype}
 \usepackage{graphicx}
@@ -11,10 +12,11 @@
 \usepackage{indentfirst}
 \usepackage{inconsolata}
 \usepackage{lmodern}
+\usepackage{titlesec}
 
+
+% Configurações dos pacotes usados para construção do documento
 \setlist[itemize]{itemsep=0.4em}
-
-
 \geometry{
 	a4paper,
 	left=3cm,
@@ -22,20 +24,12 @@
 	top=3cm,
 	bottom=2cm
 }
+\onehalfspacing
 
-
-
+% Configurações da Capa
 \author{Vinícius Queiroz Fonseca}
 \date{14 de Janeiro de 2026}
 \title{Documento de Boas Vindas - LaTeX}
-
-\usepackage{setspace}
-\onehalfspacing
-
-\usepackage{titlesec}
-
-
-% Configurações da Capa
 \makeatletter
 \renewcommand{\maketitle}{
 	\begin{titlepage}
@@ -58,9 +52,9 @@
 	\end{titlepage}
 }
 \makeatother
-% --- 
 
-% - Ambiente Textual
+
+% Ambiente Textual
 \begin{document}
 	\justifying
 	
@@ -119,7 +113,7 @@
 	
 \begin{itemize}
 	\item A segunda aula irá explorar conceitos mais avançados da linguagem LaTeX.
-	\item Serão abordados o funcionamento dos pacotes adicionais e o gerenciamento de referências bibliográficas.
+	\item Serão abordados o funcion% --- amento dos pacotes adicionais e o gerenciamento de referências bibliográficas.
 	\item Também será apresentada uma introdução ao desenvolvimento de documentos utilizando a classe \texttt{abntex2} \cite{abntex2}, seguindo a formatação ABNT.
 	\item Por fim, será discutido o uso do template da revista SBC \cite{sbc-template} utilizado nos Trabalhos de Conclusão de Curso dos cursos de Computação da instituição.
 \end{itemize}
