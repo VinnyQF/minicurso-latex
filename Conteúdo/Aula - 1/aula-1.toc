@@ -4,37 +4,42 @@
 \contentsline {subsection}{\numberline {2.1}Comandos ou Macros:}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Ambientes:}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Comentários:}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Criando um Preâmbulo do Documento:}{2}{section.3}%
+\contentsline {section}{\numberline {3}Criando um Preâmbulo do Documento:}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Classe do Documento:}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Importando Pacotes:}{3}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Criando o Ambiente de Documento:}{4}{section.4}%
-\contentsline {section}{\numberline {5}Criando uma Seção:}{4}{section.5}%
-\contentsline {section}{\numberline {6}Exemplo de uma nova seção:}{4}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Criando uma Subseção:}{4}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Criando uma Subsubseção:}{4}{subsubsection.6.1.1}%
-\contentsline {paragraph}{Isso é um Parágrafo:}{4}{section*.2}%
-\contentsline {section}{\numberline {7}Listas:}{5}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Listas Não Ordenadas:}{5}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Listas Ordenadas:}{5}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Estilização do Texto:}{5}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Texto em Negrito:}{5}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Texto em Itálico:}{5}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Texto Técnico:}{6}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Estilização Múltipla:}{6}{subsubsection.8.3.1}%
-\contentsline {section}{\numberline {9}O Ambiente Matemático:}{6}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Modo Matemático em Linha:}{6}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Modo Matemático em Destaque:}{6}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Modo de Equação Numerada:}{6}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Referenciando Elementos Numerados:}{7}{subsubsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.4}Expoentes e Índices:}{7}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Frações:}{7}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Raízes:}{8}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Símbolos Matemáticos Básicos:}{8}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Observação Importante:}{8}{subsection.9.8}%
-\contentsline {subsubsection}{\numberline {9.8.1}Extra: Lista de Símbolos e Comandos Mais Usados}{9}{subsubsection.9.8.1}%
-\contentsline {paragraph}{Operações Básicas:}{9}{section*.3}%
-\contentsline {paragraph}{Relações:}{9}{section*.4}%
-\contentsline {paragraph}{Expoentes, Índices e Frações:}{9}{section*.5}%
-\contentsline {paragraph}{Raízes:}{9}{section*.6}%
-\contentsline {paragraph}{Letras Gregas:}{9}{section*.7}%
-\contentsline {paragraph}{Espaçamento no Modo Matemático:}{9}{section*.8}%
+\contentsline {section}{\numberline {5}Criando um Título:}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}A Macro \texttt {\textbackslash author}}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}A Macro \texttt {\textbackslash date}}{4}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}A Macro \texttt {\textbackslash title}}{4}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Gerando o Título no Documento}{5}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Criando uma Seção:}{5}{section.6}%
+\contentsline {section}{\numberline {7}Exemplo de uma nova seção:}{5}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Criando uma Subseção:}{5}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Criando uma Subsubseção:}{5}{subsubsection.7.1.1}%
+\contentsline {paragraph}{Isso é um Parágrafo:}{5}{section*.2}%
+\contentsline {section}{\numberline {8}Listas:}{5}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Listas Não Ordenadas:}{5}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Listas Ordenadas:}{6}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Estilização do Texto:}{6}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Texto em Negrito:}{6}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Texto em Itálico:}{6}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Texto Técnico:}{6}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Estilização Múltipla:}{7}{subsubsection.9.3.1}%
+\contentsline {section}{\numberline {10}O Ambiente Matemático:}{7}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Modo Matemático em Linha:}{7}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Modo Matemático em Destaque:}{7}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Modo de Equação Numerada:}{7}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Referenciando Elementos Numerados:}{8}{subsubsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.4}Expoentes e Índices:}{8}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Frações:}{8}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Raízes:}{9}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Símbolos Matemáticos Básicos:}{9}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Observação Importante:}{9}{subsection.10.8}%
+\contentsline {subsubsection}{\numberline {10.8.1}Extra: Lista de Símbolos e Comandos Mais Usados}{9}{subsubsection.10.8.1}%
+\contentsline {paragraph}{Operações Básicas:}{10}{section*.3}%
+\contentsline {paragraph}{Relações:}{10}{section*.4}%
+\contentsline {paragraph}{Expoentes, Índices e Frações:}{10}{section*.5}%
+\contentsline {paragraph}{Raízes:}{10}{section*.6}%
+\contentsline {paragraph}{Letras Gregas:}{10}{section*.7}%
+\contentsline {paragraph}{Espaçamento no Modo Matemático:}{10}{section*.8}%

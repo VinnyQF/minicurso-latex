@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  12 JAN 2026 23:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  13 JAN 2026 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -456,7 +456,7 @@ Package hyperref Info: Link coloring OFF on input line 103.
 \@outlinefile=\write3
 \openout3 = `aula-1.out'.
 
-<IMAGENS/LOGO.png, id=132, 569.4876pt x 569.2467pt>
+<IMAGENS/LOGO.png, id=152, 569.4876pt x 569.2467pt>
 File: IMAGENS/LOGO.png Graphic file (type png)
 <use IMAGENS/LOGO.png>
 Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 105.
@@ -500,6 +500,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+2.
+
+(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 )
 \tf@toc=\write4
 \openout4 = `aula-1.toc'.
@@ -522,139 +532,132 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-27.
-(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-60.
+40.
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 
 
 [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 272.
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
 
-[5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
 
-[6{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
+[6{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+
+ []
+
+
+
+[7{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
 t/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-
- []
-
-
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
-
- []
-
-
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 
-[9] (./aula-1.aux)
+ []
+
+
+
+[9]
+
+[10] (./aula-1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `aula-1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `aula-1.out':
-(rerunfilecheck)             Before: 711FAA952F9C9C6103AF68BB7B23E9E0;5390
-(rerunfilecheck)             After:  B27D6E10F69EC4A90710F52349A327A5;5430.
+Package rerunfilecheck Info: File `aula-1.out' has not changed.
+(rerunfilecheck)             Checksum: 839BC34ABE0EFAD98A6D9C1D6C781245;6223.
  ) 
 Here is how much of TeX's memory you used:
- 14644 strings out of 473190
- 229897 string characters out of 5722594
- 788982 words of memory out of 5000000
- 37451 multiletter control sequences out of 15000+600000
- 622277 words of font info for 122 fonts, out of 8000000 for 9000
+ 14674 strings out of 473190
+ 230348 string characters out of 5722594
+ 824987 words of memory out of 5000000
+ 37459 multiletter control sequences out of 15000+600000
+ 622595 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,1003b,1986s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1003b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmbxi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/shar
@@ -663,12 +666,12 @@ e/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1
 sr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts
 /type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.p
 fb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-di
-st/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/l
-m/lmtt9.pfb>
-Output written on aula-1.pdf (10 pages, 359759 bytes).
+st/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf-dist/fonts/type1/public/l
+m/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+Output written on aula-1.pdf (11 pages, 390074 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
- 38150 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 462 compressed objects within 5 object streams
+ 192 named destinations out of 1000 (max. 500000)
+ 38702 words of extra memory for PDF output out of 42996 (max. 10000000)
 

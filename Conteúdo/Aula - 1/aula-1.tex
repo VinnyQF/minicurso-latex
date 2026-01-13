@@ -134,6 +134,20 @@ Caso esse comando tenha opções, essa é a sintaxe:
 	\comando[parâmetro opcional]{parâmetro obrigatório}
 \end{lstlisting}
 
+\textbf{Alguns comandos básicos do LaTeX incluem:}
+
+\begin{itemize}
+	\item \texttt{\textbackslash\textbackslash} : cria uma quebra de linha dentro do texto.
+	\item \texttt{\textbackslash\textbackslash[1em]} : adiciona um espaço vertical específico (exemplo: 1em) entre linhas.
+	\item \texttt{\textbackslash newline} : também quebra a linha, similar a \texttt{\textbackslash\textbackslash}.
+	\item \texttt{\textbackslash vspace\{valor\}} : insere espaço vertical do tamanho especificado.
+	\item \texttt{\textbackslash hspace\{valor\}} : insere espaço horizontal do tamanho especificado.
+	\item \texttt{\textbackslash textbf\{\}} : deixa o texto em negrito.
+	\item \texttt{\textbackslash textit\{\}} : deixa o texto em itálico.
+	\item \texttt{\textbackslash texttt\{\}} : deixa o texto em fonte monoespaçada (texto técnico).
+	\item \texttt{\%} : inicia um comentário que será ignorado pelo compilador.
+\end{itemize}
+
 \subsection{Ambientes:}
 
 Ambientes delimitam blocos de conteúdo e são definidos entre os comandos \texttt{\textbackslash begin\{\}} e \texttt{\textbackslash end\{\}}. \\
@@ -154,14 +168,8 @@ Comentários em LaTeX são iniciados com o símbolo ``\%''. Tudo que estiver na 
 	% Isto é um comentário e não aparece no PDF
 \end{lstlisting}
 
-\textbf{Em resumo:} A estrutura básica do LaTeX envolve:
 
-\begin{itemize}
-	\item Texto normal: conteúdo que aparecerá no documento sem formatação especial.
-	\item Comandos: instruções que alteram a formatação ou criam elementos.
-	\item Ambientes: blocos de conteúdo delimitados, cada um com funções específicas.
-	\item Comentários: texto ignorado pelo compilador para documentar o código.
-\end{itemize}
+
 
 \section{Criando um Preâmbulo do Documento:}
 
@@ -248,6 +256,55 @@ Para fazer isso, basta adicionar uma estrutura semelhante a essa como o primeiro
 		Todo o resto do documento aqui.
 	\end{document}
 \end{lstlisting}
+
+\section{Criando um Título:}
+
+Para o nosso primeiro documento, é importante ter um título básico como mecanismo de identificação. O título permite que qualquer leitor identifique rapidamente o autor, a data de criação e o tema do documento. \\ 
+
+No LaTeX, isso é feito preenchendo três macros principais no preâmbulo:
+
+\begin{lstlisting}
+	\author{nome do autor}
+	\date{data do documento}
+	\title{título do documento}
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash author}}
+
+A macro \texttt{\textbackslash author\{\}} define o nome do autor do documento. É comum incluir apenas o nome completo, mas também é possível adicionar informações adicionais, como filiação institucional:
+
+\begin{lstlisting}
+	\author{Vinícius Queiroz Fonseca \\ Centro Universitário Jorge Amado}
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash date}}
+
+A macro \texttt{\textbackslash date\{\}} define a data que aparecerá no título do documento. Caso você não queira especificar uma data, é possível deixar o campo em branco ou usar a macro \texttt{\textbackslash today} para inserir a data do dia da compilação automaticamente:
+
+\begin{lstlisting}
+	\date{\today} % Insere a data atual
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash title}}
+
+A macro \texttt{\textbackslash title\{\}} define o título do documento. Tente manter o título claro e conciso, de preferência com poucas palavras, para facilitar a identificação do tema principal.
+
+\begin{lstlisting}
+	\title{Aula 1 - Introdução ao LaTeX}
+\end{lstlisting}
+
+\subsection{Gerando o Título no Documento}
+
+Depois de definir essas macros no preâmbulo, o título é inserido no documento através do comando \texttt{\textbackslash maketitle}, que deve ser colocado logo após o início do ambiente \texttt{document}:
+
+\begin{lstlisting}
+	\begin{document}
+		\maketitle
+		...
+	\end{document}
+\end{lstlisting}
+
+O LaTeX irá gerar automaticamente o título, mostrando o nome do autor, a data e o título conforme especificado, formatando-os de forma padronizada e profissional.
 
 
 \section{Criando uma Seção:}
