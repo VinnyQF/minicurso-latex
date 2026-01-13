@@ -13,7 +13,8 @@
 \usepackage{inconsolata}
 \usepackage{lmodern}
 \usepackage{titlesec}
-
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
 % Configurações dos pacotes usados para construção do documento
 \setlist[itemize]{itemsep=0.4em}
@@ -25,6 +26,16 @@
 	bottom=2cm
 }
 \onehalfspacing
+
+% Limpa os campos padrão
+\fancyhf{}
+
+\fancyfoot[L]{Centro Universitário Jorge Amado}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Vinícius Queiroz Fonseca}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}  
 
 % Configurações da Capa
 \author{Vinícius Queiroz Fonseca}

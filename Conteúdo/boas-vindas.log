@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  12 JAN 2026 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  13 JAN 2026 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,7 +265,26 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen160
 \titlewidthfirst=\dimen161
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 64
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip75
+\f@nch@offset@elh=\skip76
+\f@nch@offset@erh=\skip77
+\f@nch@offset@olh=\skip78
+\f@nch@offset@orh=\skip79
+\f@nch@offset@elf=\skip80
+\f@nch@offset@erf=\skip81
+\f@nch@offset@olf=\skip82
+\f@nch@offset@orf=\skip83
+\f@nch@height=\skip84
+\f@nch@footalignment=\skip85
+\f@nch@widthL=\skip86
+\f@nch@widthC=\skip87
+\f@nch@widthR=\skip88
+\@temptokenb=\toks26
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69
 .
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -279,20 +298,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./boas-vindas.aux)
 \openout1 = `boas-vindas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -328,20 +347,20 @@ LaTeX Font Info:    ... okay on input line 64.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 64.
-Package microtype Info: Applying patch `item' on input line 64.
-Package microtype Info: Applying patch `toc' on input line 64.
-Package microtype Info: Applying patch `eqnum' on input line 64.
-Package microtype Info: Applying patch `footnote' on input line 64.
-Package microtype Info: Applying patch `verbatim' on input line 64.
-LaTeX Info: Redefining \microtypesetup on input line 64.
+LaTeX Info: Redefining \microtypecontext on input line 69.
+Package microtype Info: Applying patch `item' on input line 69.
+Package microtype Info: Applying patch `toc' on input line 69.
+Package microtype Info: Applying patch `eqnum' on input line 69.
+Package microtype Info: Applying patch `footnote' on input line 69.
+Package microtype Info: Applying patch `verbatim' on input line 69.
+LaTeX Info: Redefining \microtypesetup on input line 69.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 64.
+LaTeX Info: Redefining \showhyphens on input line 69.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -356,12 +375,12 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 \scratchbox=\box56
 \nofMPsegments=\count289
 \nofMParguments=\count290
-\everyMPshowfont=\toks26
+\everyMPshowfont=\toks27
 \MPscratchCnt=\count291
 \MPscratchDim=\dimen163
 \MPnumerator=\count292
 \makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks27
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -378,7 +397,7 @@ tim
 <IMAGENS/LOGO.png, id=1, 569.4876pt x 569.2467pt>
 File: IMAGENS/LOGO.png Graphic file (type png)
 <use IMAGENS/LOGO.png>
-Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 67.
+Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 72.
 (pdftex.def)             Requested size: 142.26378pt x 142.19841pt.
 
 
@@ -387,13 +406,13 @@ Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 67.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/lm/lm-ec.enc} <./IMAGENS/LOGO.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-4.
+9.
 
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-23.
+28.
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -444,19 +463,19 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7457 strings out of 473190
- 123103 string characters out of 5722594
- 570180 words of memory out of 5000000
- 30517 multiletter control sequences out of 15000+600000
- 607740 words of font info for 101 fonts, out of 8000000 for 9000
+ 7798 strings out of 473190
+ 129306 string characters out of 5722594
+ 577867 words of memory out of 5000000
+ 30856 multiletter control sequences out of 15000+600000
+ 607657 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,1008b,367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,1008b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/lm/lmri7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on boas-vindas.pdf (3 pages, 205311 bytes).
+Output written on boas-vindas.pdf (3 pages, 205678 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
