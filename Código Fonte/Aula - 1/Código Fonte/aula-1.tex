@@ -1,0 +1,692 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage[colorlinks=false, linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\pagestyle{fancy} 
+
+% Limpa os campos padrão
+\fancyhf{}
+
+
+
+% Rodapé
+\fancyfoot[L]{Centro Universitário Jorge Amado}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Vinícius Queiroz Fonseca}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}  
+
+
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	extendedchars=true,
+	inputencoding=utf8,
+	literate=
+	{á}{{\'a}}1
+	{à}{{\`a}}1
+	{ã}{{\~a}}1
+	{â}{{\^a}}1
+	{é}{{\'e}}1
+	{ê}{{\^e}}1
+	{í}{{\'i}}1
+	{ó}{{\'o}}1
+	{ô}{{\^o}}1
+	{õ}{{\~o}}1
+	{ú}{{\'u}}1
+	{ç}{{\c c}}1
+	{Á}{{\'A}}1
+	{À}{{\`A}}1
+	{Ã}{{\~A}}1
+	{Â}{{\^A}}1
+	{É}{{\'E}}1
+	{Ê}{{\^E}}1
+	{Í}{{\'I}}1
+	{Ó}{{\'O}}1
+	{Ô}{{\^O}}1
+	{Õ}{{\~O}}1
+	{Ú}{{\'U}}1
+	{Ç}{{\c C}}1
+}
+
+\geometry{
+	a4paper,
+	left=3cm,
+	right=2cm,
+	top=3cm,
+	bottom=2cm
+}
+
+
+% Configurações da Capa
+\author{Vinícius Queiroz Fonseca}
+\date{14 de Janeiro de 2026}
+\title{Aula 1 - Tutorial de \LaTeX \hspace{1pt} básico}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\centering
+		
+		\includegraphics[width=5cm]{IMAGENS/LOGO.png}
+		
+		\vspace{1cm}
+		
+		{\large \@author\par}
+		
+		\vfill
+		
+		{\LARGE\bfseries \@title\par}
+		
+		\vfill
+		
+		{\large \@date\par}
+		
+	\end{titlepage}
+}
+\makeatother
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução:}
+Esse documento serve como manual de consulta para a primeira aula do minicurso e pode ser consultado a qualquer momento como referência para criar um documento de exemplo inicial.
+
+
+\section{A Sintaxe da Linguagem \TeX:}
+
+O LaTeX é uma linguagem baseada em \textbf{comandos} e \textbf{ambientes}.  \\
+
+Tudo o que você escreve fora de um comando é considerado texto normal, enquanto os comandos instruem o compilador a realizar formatações, criar estruturas ou inserir elementos especiais.
+
+\subsection{Comandos ou Macros:}
+
+Um comando, também conhecido como ``macro'' em LaTeX geralmente começa com uma \textbf{barra invertida} ``\textbackslash'' seguida do nome do comando, podendo ou não receber \textbf{argumentos} entre chaves \{\}.  \\
+
+Essa é a sintaxe básica de um comando:
+
+\begin{lstlisting}
+	\comando
+\end{lstlisting}
+
+Caso esse comando tenha opções, essa é a sintaxe:
+
+\begin{lstlisting}
+	\comando[parâmetro opcional]{parâmetro obrigatório}
+\end{lstlisting}
+
+\textbf{Alguns comandos básicos do LaTeX incluem:}
+
+\begin{itemize}
+	\item \texttt{\textbackslash\textbackslash} : cria uma quebra de linha dentro do texto.
+	\item \texttt{\textbackslash\textbackslash[1em]} : adiciona um espaço vertical específico (exemplo: 1em) entre linhas.
+	\item \texttt{\textbackslash newline} : também quebra a linha, similar a \texttt{\textbackslash\textbackslash}.
+	\item \texttt{\textbackslash vspace\{valor\}} : insere espaço vertical do tamanho especificado.
+	\item \texttt{\textbackslash hspace\{valor\}} : insere espaço horizontal do tamanho especificado.
+	\item \texttt{\textbackslash textbf\{\}} : deixa o texto em negrito.
+	\item \texttt{\textbackslash textit\{\}} : deixa o texto em itálico.
+	\item \texttt{\textbackslash texttt\{\}} : deixa o texto em fonte monoespaçada (texto técnico).
+	\item \texttt{\%} : inicia um comentário que será ignorado pelo compilador.
+\end{itemize}
+
+\subsection{Ambientes:}
+
+Ambientes delimitam blocos de conteúdo e são definidos entre os comandos \texttt{\textbackslash begin\{\}} e \texttt{\textbackslash end\{\}}. \\
+
+Essa é a sintaxe básica de um ambiente genérico:
+
+\begin{lstlisting}
+	\begin{ambiente}      % Início do ambiente
+	conteúdo...
+	\end{ambiente}         % Fim do ambiente
+\end{lstlisting}
+
+\subsection{Comentários:}
+
+Comentários em LaTeX são iniciados com o símbolo ``\%''. Tudo que estiver na linha após este símbolo é ignorado pelo compilador.
+
+\begin{lstlisting}
+	% Isto é um comentário e não aparece no PDF
+\end{lstlisting}
+
+
+
+
+\section{Criando um Preâmbulo do Documento:}
+
+Antes de criar um documento em si, é importante entender o conceito por trás de um preâmbulo. De modo geral, o preâmbulo é onde ficam todas as configurações associadas ao texto e à sua formatação, mas que não participam diretamente do documento. \\
+
+Fazendo uma analogia, é como importar bibliotecas e configurações em uma linguagem de programação tradicional, e existem vários pacotes que podem ser importados durante o preâmbulo. Para os propósitos desta aula, não iremos abordar diretamente quais pacotes importar, ou como esse processo funciona, e sim alguns essenciais para entendimento básico da criação de um documento. \\
+
+Quais itens fazem parte de um preâmbulo?
+
+\begin{itemize}
+	\item Classe do documento (artigo, relatório, livro, etc.)
+	\item Idioma
+	\item Fonte
+	\item Margens
+	\item Pacotes adicionais
+\end{itemize}
+
+O preâmbulo fica localizado \textbf{antes} do comando \texttt{\textbackslash begin\{document\}}. Ou seja, antes da declaração do ambiente de escrita em si.
+
+\subsection{Classe do Documento:}
+
+Um documento pode ter diversas possibilidades de classe, e apenas uma classe por vez. Um exemplo disso é a classe que será usada nesta aula, conhecida como artigo, ou \texttt{article}. \\
+
+A classe \texttt{article} é indicada para documentos curtos, artigos, trabalhos acadêmicos simples e relatórios pequenos.
+
+Outras classes comuns incluem:
+\begin{itemize}
+	\item \texttt{report}
+	\item \texttt{book}
+	\item \texttt{beamer}
+\end{itemize}
+
+Para escolher uma classe de um documento, basta adicionar uma linha no preâmbulo contendo a informação geral dessa classe. Por exemplo:
+
+\begin{lstlisting}
+	\documentclass{article}
+\end{lstlisting}
+
+\subsection{Importando Pacotes:}
+
+Importar pacotes é um passo fundamental, porém nebuloso em alguns aspectos. Existem muitos pacotes no LaTeX, muitos desses realizam funções excelentes e permitem alta capacidade de customização. \\
+ 
+O porém mora em uma ausência de documentação direta, então a melhor forma de aprender a utilizar um pacote corretamente é buscando por recursos na internet que te expliquem como aplicar uma determinada funcionalidade, e, depois disso, memorizar este conteúdo. Essa é sintaxe de importação de um pacote:
+
+
+
+\begin{lstlisting}
+	\usepackage{pacote}
+\end{lstlisting}
+
+Alguns pacotes podem conter opções adicionais. Nesses casos, podem haver situações como essa:
+
+\begin{lstlisting}
+	\usepackage[opções]{pacote}
+\end{lstlisting}
+
+Para a construção do seu primeiro documento, esta lista de pacotes deve ser o suficiente:
+
+
+\begin{lstlisting}
+	\usepackage[brazil]{babel} % Suporte ao idioma português
+	\usepackage[T1]{fontenc} % Codificação adequada da fonte fonte
+	\usepackage{lmodern}  % Fonte Latin Modern
+	\usepackage{graphicx} % Inserção de imagens
+	\usepackage{microtype} % Melhora a tipografia do texto
+\end{lstlisting}
+
+É importante ressaltar que um preâmbulo pode crescer a depender da quantidade de pacotes que um documento utilizar. Uma forma de mitigar o tamanho do preâmbulo é fazendo importações múltiplas de pacotes, utilizando a seguinte sintaxe:
+
+\begin{lstlisting}
+	\usepackage[opção global]{pacote1, pacote2, pacote...}
+\end{lstlisting}
+
+Embora seja possível importar vários pacotes em uma única linha, as opções informadas são aplicadas a todos os pacotes listados. Por isso, essa forma deve ser usada com cautela, especialmente quando os pacotes exigem configurações distintas.
+
+\section{Criando o Ambiente de Documento:}
+
+O primeiro passo de construção de um documento simples em LaTeX é a criação do ambiente \texttt{document}. \\
+
+Para fazer isso, basta adicionar uma estrutura semelhante a essa como o primeiro elemento do seu documento:
+
+\begin{lstlisting}
+	\begin{document}
+		Todo o resto do documento aqui.
+	\end{document}
+\end{lstlisting}
+
+\section{Criando um Título:}
+
+Para o nosso primeiro documento, é importante ter um título básico como mecanismo de identificação. O título permite que qualquer leitor identifique rapidamente o autor, a data de criação e o tema do documento. \\ 
+
+No LaTeX, isso é feito preenchendo três macros principais no preâmbulo:
+
+\begin{lstlisting}
+	\author{nome do autor}
+	\date{data do documento}
+	\title{título do documento}
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash author}}
+
+A macro \texttt{\textbackslash author\{\}} define o nome do autor do documento. É comum incluir apenas o nome completo, mas também é possível adicionar informações adicionais, como filiação institucional:
+
+\begin{lstlisting}
+	\author{Vinícius Queiroz Fonseca \\ Centro Universitário Jorge Amado}
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash date}}
+
+A macro \texttt{\textbackslash date\{\}} define a data que aparecerá no título do documento. Caso você não queira especificar uma data, é possível deixar o campo em branco ou usar a macro \texttt{\textbackslash today} para inserir a data do dia da compilação automaticamente:
+
+\begin{lstlisting}
+	\date{\today} % Insere a data atual
+\end{lstlisting}
+
+\subsection{A Macro \texttt{\textbackslash title}}
+
+A macro \texttt{\textbackslash title\{\}} define o título do documento. Tente manter o título claro e conciso, de preferência com poucas palavras, para facilitar a identificação do tema principal.
+
+\begin{lstlisting}
+	\title{Aula 1 - Introdução ao LaTeX}
+\end{lstlisting}
+
+\subsection{Gerando o Título no Documento}
+
+Depois de definir essas macros no preâmbulo, o título é inserido no documento através do comando \texttt{\textbackslash maketitle}, que deve ser colocado logo após o início do ambiente \texttt{document}:
+
+\begin{lstlisting}
+	\begin{document}
+		\maketitle
+		...
+	\end{document}
+\end{lstlisting}
+
+O LaTeX irá gerar automaticamente o título, mostrando o nome do autor, a data e o título conforme especificado, formatando-os de forma padronizada e profissional.
+
+
+\section{Criando uma Seção:}
+
+Para o LaTeX, seções são numeradas automaticamente. Elas contém um título maior que as subseções e subsubseções. \\
+
+Quem determina a ordem de numeração é o chamado do comando \texttt{\textbackslash section\{\}}, ou seja, qualquer seção que for criada após uma seção original será numerada em ordem crescente, seguindo o padrão \{1\}.
+
+\begin{lstlisting}
+	\section{Exemplo de Seção}
+\end{lstlisting}
+
+\section{Exemplo de uma nova seção:}
+
+Como pode ser observado, essa seção já apresenta a numeração correta.
+
+\subsection{Criando uma Subseção:}
+
+Subseções seguem o mesmo princípio de funcionamento, iterando em \{1.1\} em sequência à última seção conhecida. Elas podem ser chamadas pelo comando \texttt{\textbackslash subsection\{\}}.
+
+\begin{lstlisting}
+	\subsection{Exemplo de Subseção}
+\end{lstlisting}
+
+\subsubsection{Criando uma Subsubseção:}
+
+Por fim. Nós temos as subsubseções, que são iteradas em \{1.1.1\}, em sequência à uma última seção ou subseção conhecida. Normalmente subsubseções são precedidas de uma seção, mas isso não necessariamente é algo obrigatório. Elas podem ser chamadas pelo comando \texttt{\textbackslash subsubsection\{\}}.
+
+\begin{lstlisting}
+	\subsubsection{Exemplo de Subsubseção}
+\end{lstlisting}
+
+\paragraph{Isso é um Parágrafo:}
+
+O comando \texttt{\textbackslash paragraph\{\}} cria um título de parágrafo. Seu comportamento visual pode variar conforme a classe do documento. A quebra de linha não acontece por padrão quando um título de parágrafo é inserido.
+\begin{lstlisting}
+	\paragraph{Exemplo de Parágrafo com título}
+\end{lstlisting}
+
+\section{Listas:}
+
+\subsection{Listas Não Ordenadas:}
+O ambiente \texttt{itemize} é utilizado para criar listas não ordenadas, conforme o exemplo abaixo:
+
+\begin{lstlisting}
+	\begin{itemize}
+		\item Primeiro itemLaTeX
+		\item Segundo item
+		\item Terceiro item
+	\end{itemize}
+\end{lstlisting}
+
+
+\begin{itemize}
+	\item Este é um item da lista
+	\item É possível adicionar quantos itens forem necessários
+	\item O alinhamento e espaçamento são gerenciados automaticamente
+\end{itemize}
+
+
+
+\subsection{Listas Ordenadas:}
+O ambiente \texttt{enumerate} é utilizado para criar listas ordenadas, nas quais os itens são numerados automaticamente, conforme o exemplo abaixo:
+
+\begin{lstlisting}
+	\begin{enumerate}
+		\item Primeiro item
+		\item Segundo item
+		\item Terceiro item
+	\end{enumerate}
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Este é o primeiro item da lista
+	\item A numeração é gerada automaticamente
+	\item A ordem dos itens é preservada
+\end{enumerate}
+
+\section{Estilização do Texto:}
+
+Quando você escreve seu documento, irão surgir necessidades como a definição de caracteres em itálico, negrito, texto técnico e outras possibilidades. \\
+
+Cada uma dessas possibilidades conta com uma determinada macro que consegue encapsular o texto e formatá-lo da forma desejada. \\
+
+Agora, vamos elaborar sobre as formatações mais usadas:
+
+\subsection{Texto em Negrito:}
+
+Para tornar o texto em \textbf{negrito}, basta encapsular uma palavra com a macro \texttt{$\backslash$textbf\{\}.}
+
+\begin{lstlisting}
+	\textbf{texto em negrito.}
+\end{lstlisting}
+
+\subsection{Texto em Itálico:}
+
+Para tornar o texto em \textit{itálico}, basta encapsular uma palavra com a macro \texttt{$\backslash$textit\{\}.}
+
+\begin{lstlisting}
+	\textit{texto em itálico.}
+\end{lstlisting}
+
+\subsection{Texto Técnico:}
+
+Existe também uma opção para formatar o texto em um formato \texttt{técnico}, com o objetivo de diferenciar a informação original, sem usar negrito ou itálico. \\
+
+Isso é feito através da macro \texttt{$\backslash$texttt\{\}}
+
+\begin{lstlisting}
+	\texttt{texto técnico.}
+\end{lstlisting}
+
+\subsubsection{Estilização Múltipla:}
+
+Caso seja necessário, é possível misturar esses elementos. Por exemplo, \textbf{\textit{é possível produzir um texto itálico em negrito.}} Para fazer isso, basta combinar as macros, encapsulando uma dentro da outra. \\
+
+Ou seja, fazer algo conforme o exemplo abaixo:
+
+\begin{lstlisting}
+	\textbf{\textit{texto em negrito e em itálico.}}
+\end{lstlisting}
+
+A ordem em si em que esses elementos aparecem não importa, \textit{\textbf{então é possível fazer o contrário e obter o mesmo efeito final:}}
+
+\begin{lstlisting}
+	\textit{\textbf{texto em itálico e depois em negrito}}
+\end{lstlisting}
+
+
+\section{O Ambiente Matemático:}
+
+O LaTeX possui um ambiente próprio para a escrita de expressões matemáticas, o que permite criar fórmulas com excelente qualidade tipográfica, de forma consistente e padronizada. \\
+
+Existem duas formas principais de escrever expressões matemáticas: em linha (inline) e em destaque (display).
+
+\subsection{Modo Matemático em Linha:}
+
+O modo matemático em linha é utilizado quando a expressão faz parte do texto corrido. Ele é delimitado pelo símbolo \texttt{\$}.
+
+\begin{lstlisting}
+	A área de um quadrado é dada por $A = l^2$.
+\end{lstlisting}
+
+O resultado será uma expressão matemática integrada ao texto, sem quebra de linha. Ex: $A = l^2$
+
+\subsection{Modo Matemático em Destaque:}
+
+Quando a expressão precisa de mais destaque ou ocupa mais espaço, utiliza-se o modo matemático em destaque, delimitado por \texttt{\textbackslash[} e \texttt{\textbackslash]}.
+
+\[
+A = l^2
+\]
+
+\begin{lstlisting}
+	\[
+	A = l^2
+	\]
+\end{lstlisting}
+
+
+\subsection{Modo de Equação Numerada:}
+
+O LaTeX permite criar equações numeradas automaticamente usando o ambiente \texttt{equation}. Isso é útil quando você deseja referenciar a equação posteriormente no texto.
+
+\begin{equation}
+	E = mc^2
+	\label{exemplo_1}
+\end{equation}
+
+\begin{lstlisting}
+	\begin{equation}
+		E = mc^2
+		\label{exemplo_1}		
+	\end{equation}
+\end{lstlisting}
+
+
+\subsubsection{Referenciando Elementos Numerados:}
+
+Para criar referências automáticas, usamos: \\
+
+\texttt{\textbackslash label{}} dentro do ambiente numerado (equação, figura, tabela, etc.). \\
+
+\texttt{\textbackslash ref{}} fora do ambiente, onde queremos mencionar o número. \\
+
+Exemplo com equação:
+
+\begin{lstlisting}
+	\begin{equation}
+		E = mc^2
+		\label{eq:energia}
+	\end{equation}
+	
+	Como mostrado na equação~\ref{eq:energia}, ...
+\end{lstlisting}
+
+Exemplo com figura:
+
+\begin{lstlisting}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{exemplo.png}
+		\caption{Exemplo de figura}
+		\label{fig:exemplo}
+	\end{figure}
+	
+	A figura~\ref{fig:exemplo} ilustra o conceito.
+\end{lstlisting}
+
+Dessa forma, os números de equações, figuras e tabelas são atualizados automaticamente caso novos elementos sejam adicionados. Isso evita que você precise renumerar manualmente o documento.
+
+
+\subsection{Expoentes e Índices:}
+
+Expoentes são criados com o caractere \texttt{\^} e índices com o caractere \texttt{\_}.
+
+
+\[
+x^2 + y_1
+\]
+
+
+\begin{lstlisting}
+	\[
+	x^2 + y_1
+	\]
+\end{lstlisting}
+
+
+Quando o expoente ou índice possui mais de um caractere, é necessário utilizar chaves.
+
+\[
+x^{n+1} + y_{i,j}
+\]
+
+\begin{lstlisting}
+	\[
+	x^{n+1} + y_{i,j}
+	\]
+\end{lstlisting}
+
+
+
+\subsection{Frações:}
+
+Frações são criadas com o comando \texttt{\textbackslash frac\{\}\{\}}.
+
+\[
+\frac{a}{b}
+\]
+
+\begin{lstlisting}
+	\[
+	\frac{a}{b}
+	\]
+\end{lstlisting}
+
+Também é possível combinar frações com outras operações matemáticas.
+
+\[
+\frac{x^2 + 1}{x - 1}
+\]
+
+\begin{lstlisting}
+	\[
+	\frac{x^2 + 1}{x - 1}
+	\]
+\end{lstlisting}
+
+\subsection{Raízes:}
+
+A macro \texttt{\textbackslash sqrt\{\}} é utilizada para criar raízes quadradas.
+
+\[
+\sqrt{x}
+\]
+
+\begin{lstlisting}
+	\[
+	\sqrt{x}
+	\]
+\end{lstlisting}
+
+Para raízes de ordem diferente de dois, utiliza-se um argumento opcional.
+
+\[
+\sqrt[3]{x}
+\]
+
+\begin{lstlisting}
+	\[
+	\sqrt[3]{x}
+	\]
+\end{lstlisting}
+
+\subsection{Símbolos Matemáticos Básicos:}
+
+O \LaTeX{} fornece diversos símbolos matemáticos prontos para uso.
+
+\[
+\alpha + \beta = \gamma
+\]
+
+\begin{lstlisting}
+	\[
+	\alpha + \beta = \gamma
+	\]
+\end{lstlisting}
+
+\[
+a \leq b \quad c \geq d \quad x \neq y
+\]
+
+\begin{lstlisting}
+	\[
+	a \leq b \quad c \geq d \quad x \neq y
+	\]
+\end{lstlisting}
+
+\subsection{Observação Importante:}
+
+O modo matemático ignora espaços e utiliza regras próprias de formatação. Por isso, comandos matemáticos devem sempre estar dentro de um ambiente matemático. \\
+
+Tentativas de usar comandos como \texttt{\textbackslash frac} ou \texttt{\textbackslash sqrt} fora do modo matemático resultarão em erro de compilação.
+
+\subsubsection{Extra: Lista de Símbolos e Comandos Mais Usados}
+
+Segue aqui uma lista de elementos muito usados no ambiente matemático do LaTeX. É bom notar que existem muitos elementos que vão além desse ponto, e que é importante consultar a documentação para elementos mais avançados.
+
+\paragraph{Operações Básicas:}
+
+\begin{itemize}
+	\item Soma: \texttt{+}
+	\item Subtração: \texttt{-}
+	\item Multiplicação: \texttt{\textbackslash times} \quad ($\times$)
+	\item Divisão: \texttt{\textbackslash div} \quad ($\div$)
+\end{itemize}
+
+\paragraph{Relações:}
+
+\begin{itemize}
+	\item Igualdade: \texttt{=} \quad ($=$)
+	\item Diferente: \texttt{\textbackslash neq} \quad ($\neq$)
+	\item Menor ou igual: \texttt{\textbackslash leq} \quad ($\leq$)
+	\item Maior ou igual: \texttt{\textbackslash geq} \quad ($\geq$)
+\end{itemize}
+
+\paragraph{Expoentes, Índices e Frações:}
+
+\begin{itemize}
+	\item Expoente: \texttt{x\textasciicircum 2} \quad ($x^2$)
+	\item Índice: \texttt{x\_1} \quad ($x_1$)
+	\item Fração: \texttt{\textbackslash frac\{a\}\{b\}} \quad ($\frac{a}{b}$)
+\end{itemize}
+
+\paragraph{Raízes:}
+
+\begin{itemize}
+	\item Raiz quadrada: \texttt{\textbackslash sqrt\{x\}} \quad ($\sqrt{x}$)
+	\item Raiz cúbica: \texttt{\textbackslash sqrt[3]\{x\}} \quad ($\sqrt[3]{x}$)
+\end{itemize}
+
+\paragraph{Letras Gregas:}
+
+\begin{itemize}
+	\item \texttt{\textbackslash alpha} \quad ($\alpha$)
+	\item \texttt{\textbackslash beta} \quad ($\beta$)
+	\item \texttt{\textbackslash gamma} \quad ($\gamma$)
+	\item \texttt{\textbackslash pi} \quad ($\pi$)
+\end{itemize}
+
+\paragraph{Espaçamento no Modo Matemático:}
+
+\begin{itemize}
+	\item Pequeno espaço: \texttt{\textbackslash ,}
+	\item Espaço médio: \texttt{\textbackslash ;}
+	\item Espaço grande: \texttt{\textbackslash quad}
+\end{itemize}
+
+
+Todos os comandos apresentados nesta seção devem ser utilizados dentro do modo matemático, seja ele em linha (\texttt{\$...\$}) ou em destaque (\texttt{\textbackslash[...\textbackslash]}).
+
+
+
+\end{document}
