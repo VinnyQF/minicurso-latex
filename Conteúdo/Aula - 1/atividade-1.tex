@@ -1,0 +1,139 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\pagestyle{fancy} 
+
+% Limpa os campos padrão
+\fancyhf{}
+
+
+
+% Rodapé
+\fancyfoot[L]{Centro Universitário Jorge Amado}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Vinícius Queiroz Fonseca}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}  
+
+
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	extendedchars=true,
+	inputencoding=utf8,
+	literate=
+	{á}{{\'a}}1
+	{à}{{\`a}}1
+	{ã}{{\~a}}1
+	{â}{{\^a}}1
+	{é}{{\'e}}1
+	{ê}{{\^e}}1
+	{í}{{\'i}}1
+	{ó}{{\'o}}1
+	{ô}{{\^o}}1
+	{õ}{{\~o}}1
+	{ú}{{\'u}}1
+	{ç}{{\c c}}1
+	{Á}{{\'A}}1
+	{À}{{\`A}}1
+	{Ã}{{\~A}}1
+	{Â}{{\^A}}1
+	{É}{{\'E}}1
+	{Ê}{{\^E}}1
+	{Í}{{\'I}}1
+	{Ó}{{\'O}}1
+	{Ô}{{\^O}}1
+	{Õ}{{\~O}}1
+	{Ú}{{\'U}}1
+	{Ç}{{\c C}}1
+}
+
+\geometry{
+	a4paper,
+	left=3cm,
+	right=2cm,
+	top=3cm,
+	bottom=2cm
+}
+
+
+% Configurações da Capa
+\author{Vinícius Queiroz Fonseca}
+\date{14 de Janeiro de 2026}
+\title{Aula 1 - Atividade \LaTeX \hspace{1pt}}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\centering
+		
+		\includegraphics[width=5cm]{IMAGENS/LOGO.png}
+		
+		\vspace{1cm}
+		
+		{\large \@author\par}
+		
+		\vfill
+		
+		{\LARGE\bfseries \@title\par}
+		
+		\vfill
+		
+		{\large \@date\par}
+		
+	\end{titlepage}
+}
+\makeatother
+
+
+\begin{document}
+	\maketitle
+	
+	\section{Atividade:}
+	Com base no que foi visto na última aula e no PDF ``\texttt{aula-1}'', elabore um documento original em PDF contendo os seguintes elementos:
+
+	
+	\begin{itemize}
+		\item Um título com data e autor(a).
+		\item Ao menos uma seção.
+		\item Ao menos uma subseção.
+		\item Ao menos uma subsubseção.
+		\item Uma fórmula matemática.
+	\end{itemize}
+	
+	\subsection{Elementos opcionais:}
+	
+	\begin{itemize}
+		\item Ao menos uma equação numerada.
+		\item Ao menos um parágrafo nomeado.
+		\item Uma lista de itens não numerada.
+		\item Uma lista de itens numerada.
+		\item Uma referência à equação criada no texto.
+	\end{itemize}
+	
+	
+	\section{Entrega:}
+	
+	A entrega será feita pelo seguinte endereço de e-mail: \href{mailto:viniqf@proton.me}{viniqf@proton.me}. \\
+	
+	O PDF deve ser enviado até o dia 21/01/2026, antes da próxima aula. \\
+	
+	A aula seguinte começará com a correção das entregas e sugestões de melhoria.
+
+	
+\end{document}
+
