@@ -110,24 +110,44 @@
 \newpage
 
 \section{Introdução}
-Este documento serve como continuação do material \texttt{``aula-1.pdf''}, apresentado na primeira aula. Seu objetivo é introduzir conteúdos mais avançados do \LaTeX, com foco no gerenciamento de pacotes, no uso de referências bibliográficas e em esquemas de formatação mais elaborados, como a produção de documentos nos padrões ABNT e SBC.
+Este documento serve como continuação do material \texttt{``aula-1.pdf''}, apresentado na primeira aula, que teve como objetivo introduzir os básicos da linguagem \TeX.
+
+Seu objetivo é introduzir conteúdos mais avançados do \LaTeX, focando nos seguintes elementos:
+
+
+\begin{itemize}
+	\item Gerenciamento de Pacotes
+	\item Referências Bibliográficas
+	\item Formatação Avançada (ABNT, SBC)
+	\item Resolvendo Problemas Com o Compilador
+\end{itemize}
+
 
 \section{Gerenciamento de Pacotes}
 Antes de compreender o funcionamento de templates visuais, modelos prontos ou novas classes de documento, é fundamental revisar e expandir alguns conceitos relacionados ao gerenciamento de pacotes no \LaTeX.
 
 De forma geral, o gerenciamento adequado de pacotes é o que permite estender as funcionalidades básicas do compilador, tornando possível a criação de documentos mais complexos, organizados e visualmente consistentes.
 
-\subsection{O Que São Pacotes?}
-Pacotes podem ser entendidos como extensões adicionadas ao \LaTeX \hspace{1pt} com o objetivo de fornecer funcionalidades que não estão disponíveis em sua configuração padrão. Esses pacotes podem atuar em diversas áreas, como formatação de texto, inclusão de imagens, criação de tabelas complexas, controle de referências bibliográficas, gerenciamento de cores, hiperlinks, entre muitas outras possibilidades.
-
-Atualmente, existe uma quantidade extremamente grande de pacotes disponíveis para o \LaTeX, cada um com sua própria finalidade, sintaxe e forma de utilização.
-
-Um dos principais problemas relacionados ao uso de pacotes é a documentação. Embora muitos pacotes sejam bem documentados e amplamente utilizados, nem todos apresentam exemplos claros ou explicações detalhadas. Em alguns casos, um pacote pode oferecer funcionalidades essenciais para o usuário final, mas não possuir uma documentação adequada, exigindo a consulta a fóruns, exemplos de terceiros ou ao próprio código-fonte.
-
 \subsection{Como Encontrar Pacotes?}
 A forma mais confiável de encontrar pacotes para \LaTeX \hspace{1pt} é por meio do repositório oficial conhecido como CTAN, sigla para \texttt{``Comprehensive \TeX\hspace{1pt} Archive Network''}. O CTAN reúne praticamente todos os pacotes disponíveis para o ecossistema \TeX\ e \LaTeX. 
 
 Nesse repositório, é possível encontrar descrições detalhadas dos pacotes, informações sobre compatibilidade, histórico de versões e, em muitos casos, manuais de uso e exemplos práticos. Além disso, a maioria das distribuições modernas do \LaTeX, como \TeX\ Live e MiK\TeX, utiliza o CTAN como base para instalação e atualização automática de pacotes.
+
+
+\subsection{Utilizando Pacotes}
+Conforme mencionado antes, não existe uma padronização na sintaxe dos pacotes no \LaTeX. Cada pacote vai adotar sua própria sintaxe ou estrutura. Alguns pacotes apenas realizam ações diretas no código fonte, sem a necessidade de novos elementos diretos, sendo presentes apenas no preâmbulo. 
+
+Em outros casos, os pacotes podem introduzir novas funcionalidades que demandam ajustes na sintaxe padrão. Como não é possível descrever o funcionamento de todos os pacotes existentes de forma individual, esse documento irá direcionar seu foco para pacotes ``essenciais'', que cobrem funcionalidades utilizadas em grande parte dos documentos, conforme os exemplos:
+
+\begin{itemize}
+	\item Posicionamento de Imagens
+	\item Troca de Fontes
+	\item ``Pular'' Linhas por Padrão
+\end{itemize}
+
+\subsubsection{Posicionando Imagens}
+
+O primeiro pacote de interesse na produção de algum artigo científico é conhecido como \texttt{``float''}. Esse pacote permite o posicionamento de imagens de uma forma explícita pelo código, já que o comando básico \texttt{includegraphics} posiciona imagens automaticamente durante a compilação.
 
 
 

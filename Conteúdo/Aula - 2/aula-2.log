@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  2 FEB 2026 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  2 FEB 2026 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,7 +459,7 @@ Package hyperref Info: Link coloring OFF on input line 104.
 \@outlinefile=\write3
 \openout3 = `aula-2.out'.
 
-<IMAGENS/LOGO.png, id=20, 569.4876pt x 569.2467pt>
+<IMAGENS/LOGO.png, id=24, 569.4876pt x 569.2467pt>
 File: IMAGENS/LOGO.png Graphic file (type png)
 <use IMAGENS/LOGO.png>
 Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 106.
@@ -525,22 +525,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+19.
 
+(/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-[2] (./aula-2.aux)
+[2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./aula-2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `aula-2.out' has not changed.
-(rerunfilecheck)             Checksum: E4DCE553A19DB67EA521DACE6627A019;605.
+(rerunfilecheck)             Checksum: 0D4AF8F8980376829EE6A5C3D3A9D9AB;766.
  ) 
 Here is how much of TeX's memory you used:
- 14107 strings out of 473190
- 224163 string characters out of 5722594
- 676706 words of memory out of 5000000
- 37124 multiletter control sequences out of 15000+600000
- 608229 words of font info for 98 fonts, out of 8000000 for 9000
+ 14150 strings out of 473190
+ 225209 string characters out of 5722594
+ 678714 words of memory out of 5000000
+ 37159 multiletter control sequences out of 15000+600000
+ 608641 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1003b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dis
@@ -548,10 +553,10 @@ t/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/lm/lmtt10.pfb>
-Output written on aula-2.pdf (3 pages, 213338 bytes).
+Output written on aula-2.pdf (3 pages, 216468 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 29222 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 31278 words of extra memory for PDF output out of 35830 (max. 10000000)
 
