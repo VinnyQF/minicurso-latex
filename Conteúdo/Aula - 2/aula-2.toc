@@ -1,0 +1,5 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
+\contentsline {section}{\numberline {2}Gerenciamento de Pacotes}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O Que São Pacotes?}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Como Encontrar Pacotes?}{2}{subsection.2.2}%

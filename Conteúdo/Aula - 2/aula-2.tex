@@ -1,0 +1,134 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage[colorlinks=false, linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\pagestyle{fancy} 
+\usepackage{parskip}
+% Limpa os campos padrão
+\fancyhf{}
+
+
+
+% Rodapé
+\fancyfoot[L]{Centro Universitário Jorge Amado}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{Vinícius Queiroz Fonseca}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}  
+
+
+
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	extendedchars=true,
+	inputencoding=utf8,
+	literate=
+	{á}{{\'a}}1
+	{à}{{\`a}}1
+	{ã}{{\~a}}1
+	{â}{{\^a}}1
+	{é}{{\'e}}1
+	{ê}{{\^e}}1
+	{í}{{\'i}}1
+	{ó}{{\'o}}1
+	{ô}{{\^o}}1
+	{õ}{{\~o}}1
+	{ú}{{\'u}}1
+	{ç}{{\c c}}1
+	{Á}{{\'A}}1
+	{À}{{\`A}}1
+	{Ã}{{\~A}}1
+	{Â}{{\^A}}1
+	{É}{{\'E}}1
+	{Ê}{{\^E}}1
+	{Í}{{\'I}}1
+	{Ó}{{\'O}}1
+	{Ô}{{\^O}}1
+	{Õ}{{\~O}}1
+	{Ú}{{\'U}}1
+	{Ç}{{\c C}}1
+}
+
+\geometry{
+	a4paper,
+	left=3cm,
+	right=2cm,
+	top=3cm,
+	bottom=2cm
+}
+
+
+% Configurações da Capa
+\author{Vinícius Queiroz Fonseca}
+\date{14 de Janeiro de 2026}
+\title{Aula 2 - Tutorial de \LaTeX \hspace{1pt} intermediário}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\centering
+		
+		\includegraphics[width=5cm]{IMAGENS/LOGO.png}
+		
+		\vspace{1cm}
+		
+		{\large \@author\par}
+		
+		\vfill
+		
+		{\LARGE\bfseries \@title\par}
+		
+		\vfill
+		
+		{\large \@date\par}
+		
+	\end{titlepage}
+}
+\makeatother
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+Este documento serve como continuação do material \texttt{``aula-1.pdf''}, apresentado na primeira aula. Seu objetivo é introduzir conteúdos mais avançados do \LaTeX, com foco no gerenciamento de pacotes, no uso de referências bibliográficas e em esquemas de formatação mais elaborados, como a produção de documentos nos padrões ABNT e SBC.
+
+\section{Gerenciamento de Pacotes}
+Antes de compreender o funcionamento de templates visuais, modelos prontos ou novas classes de documento, é fundamental revisar e expandir alguns conceitos relacionados ao gerenciamento de pacotes no \LaTeX.
+
+De forma geral, o gerenciamento adequado de pacotes é o que permite estender as funcionalidades básicas do compilador, tornando possível a criação de documentos mais complexos, organizados e visualmente consistentes.
+
+\subsection{O Que São Pacotes?}
+Pacotes podem ser entendidos como extensões adicionadas ao \LaTeX \hspace{1pt} com o objetivo de fornecer funcionalidades que não estão disponíveis em sua configuração padrão. Esses pacotes podem atuar em diversas áreas, como formatação de texto, inclusão de imagens, criação de tabelas complexas, controle de referências bibliográficas, gerenciamento de cores, hiperlinks, entre muitas outras possibilidades.
+
+Atualmente, existe uma quantidade extremamente grande de pacotes disponíveis para o \LaTeX, cada um com sua própria finalidade, sintaxe e forma de utilização.
+
+Um dos principais problemas relacionados ao uso de pacotes é a documentação. Embora muitos pacotes sejam bem documentados e amplamente utilizados, nem todos apresentam exemplos claros ou explicações detalhadas. Em alguns casos, um pacote pode oferecer funcionalidades essenciais para o usuário final, mas não possuir uma documentação adequada, exigindo a consulta a fóruns, exemplos de terceiros ou ao próprio código-fonte.
+
+\subsection{Como Encontrar Pacotes?}
+A forma mais confiável de encontrar pacotes para \LaTeX \hspace{1pt} é por meio do repositório oficial conhecido como CTAN, sigla para \texttt{``Comprehensive \TeX\hspace{1pt} Archive Network''}. O CTAN reúne praticamente todos os pacotes disponíveis para o ecossistema \TeX\ e \LaTeX. 
+
+Nesse repositório, é possível encontrar descrições detalhadas dos pacotes, informações sobre compatibilidade, histórico de versões e, em muitos casos, manuais de uso e exemplos práticos. Além disso, a maioria das distribuições modernas do \LaTeX, como \TeX\ Live e MiK\TeX, utiliza o CTAN como base para instalação e atualização automática de pacotes.
+
+
+
+\end{document}
