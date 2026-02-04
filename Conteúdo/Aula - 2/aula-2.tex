@@ -140,14 +140,68 @@ Conforme mencionado antes, não existe uma padronização na sintaxe dos pacotes
 Em outros casos, os pacotes podem introduzir novas funcionalidades que demandam ajustes na sintaxe padrão. Como não é possível descrever o funcionamento de todos os pacotes existentes de forma individual, esse documento irá direcionar seu foco para pacotes ``essenciais'', que cobrem funcionalidades utilizadas em grande parte dos documentos, conforme os exemplos:
 
 \begin{itemize}
-	\item Posicionamento de Imagens
-	\item Troca de Fontes
-	\item ``Pular'' Linhas por Padrão
+	\item Posicionamento de imagens
+	\item Troca de fontes
+	\item ``Pular'' linhas por padrão
 \end{itemize}
 
 \subsubsection{Posicionando Imagens}
 
-O primeiro pacote de interesse na produção de algum artigo científico é conhecido como \texttt{``float''}. Esse pacote permite o posicionamento de imagens de uma forma explícita pelo código, já que o comando básico \texttt{includegraphics} posiciona imagens automaticamente durante a compilação.
+Um dos primeiros pacotes de interesse na produção de artigos científicos é o pacote \texttt{``float''}.
+
+Esse pacote permite um controle mais explícito sobre o posicionamento de imagens no documento, uma vez que o comando básico \texttt{\textbackslash includegraphics} delega essa tarefa automaticamente ao compilador durante o processo de compilação.
+
+Para utilizar esse pacote, é necessário incluí-lo no preâmbulo do documento, conforme apresentado no documento \texttt{``aula-1.pdf''}:
+
+\begin{lstlisting}
+	\usepackage{float}
+\end{lstlisting}
+
+Após a inclusão do pacote, imagens devem ser inseridas por meio do ambiente \texttt{figure}, que é o ambiente padrão do \LaTeX\ para a inclusão de elementos gráficos:
+
+\begin{lstlisting}
+	\begin{figure}
+		\includegraphics{exemplo.jpg}
+	\end{figure}
+\end{lstlisting}
+
+Esse ambiente pode receber parâmetros adicionais que influenciam o posicionamento da imagem no documento, por meio da seguinte sintaxe:
+
+\begin{lstlisting}
+	\begin{figure}[x]
+		\includegraphics{exemplo.jpg}
+	\end{figure}
+\end{lstlisting}
+
+Nesse caso, o parâmetro \texttt{x} pode ser substituído por diferentes opções de posicionamento. As opções mais comuns são apresentadas a seguir:
+
+\begin{itemize}
+	\item \texttt{h} (\textit{here}): sugere que a imagem seja posicionada no local onde o código aparece.
+	\item \texttt{t} (\textit{top}): posiciona a imagem no topo da página.
+	\item \texttt{b} (\textit{bottom}): posiciona a imagem na parte inferior da página.
+	\item \texttt{p} (\textit{page}): posiciona a imagem em uma página exclusiva para elementos flutuantes.
+	\item \texttt{!}: parâmetro adicional que ``relaxa'' as restrições do algoritmo de posicionamento, tornando a inclusão da imagem mais flexível.
+\end{itemize}
+
+Essas opções podem ser combinadas para oferecer maior flexibilidade ao compilador. Por exemplo:
+
+\begin{lstlisting}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics{exemplo.jpg}
+	\end{figure}
+\end{lstlisting}
+
+Nesse caso, o \LaTeX\ tentará posicionar a imagem primeiro no local do código e, caso isso não seja possível, no topo da página. Outro elemento interessante vêm através da adição do comando \texttt{\textbackslash centering}, que centraliza a imagem presente no ambiente \texttt{figure}.
+
+Apesar disso, nem sempre é possível posicionar uma imagem exatamente no ponto desejado do documento, devido aos mecanismos automáticos de organização do \LaTeX. Para esses casos, o pacote \texttt{float} adiciona uma nova opção de posicionamento:
+
+
+\begin{itemize}
+	\item \texttt{H}: força o posicionamento da imagem exatamente no local onde o código aparece, ignorando o algoritmo padrão de flutuação.
+\end{itemize}
+
+É importante ressaltar que a opção \texttt{H} não pode ser combinada com outros parâmetros e só está disponível quando o pacote \texttt{float} é utilizado.
 
 
 
