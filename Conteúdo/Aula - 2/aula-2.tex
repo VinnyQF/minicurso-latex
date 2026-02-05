@@ -119,7 +119,7 @@ Seu objetivo é introduzir conteúdos mais avançados do \LaTeX, focando nos seg
 	\item Gerenciamento de Pacotes
 	\item Referências Bibliográficas
 	\item Formatação Avançada (ABNT, SBC)
-	\item Resolvendo Problemas Com o Compilador
+	\item Resolvendo Problemas do Compilador
 \end{itemize}
 
 
@@ -202,6 +202,59 @@ Apesar disso, nem sempre é possível posicionar uma imagem exatamente no ponto 
 \end{itemize}
 
 É importante ressaltar que a opção \texttt{H} não pode ser combinada com outros parâmetros e só está disponível quando o pacote \texttt{float} é utilizado.
+
+
+\subsubsection{Trocando de Fontes}
+O processo de troca de fontes no \LaTeX\hspace{1pt} é um pouco mais complexo no quesito de gerenciamento. Isso ocorre porque, além de muitas vezes ser necessário consultar um repositório de pacotes, fontes proprietárias (como a \textbf{Times New Roman}) não estão incluídas nativamente nas distribuições básicas por questões de licenciamento.
+
+Um exemplo disso é a fonte ``Times New Roman'', que é uma fonte proprietária da Microsoft. Nesse caso, é preciso utilizar alguma fonte que seja equivalente, só que gratuita. Fontes semelhantes tendem a ser indistiguíveis ao olho nu, e podem ser tratadas como substitutas diretas, mas é importante saber o nome do pacote associado à essa fonte.
+
+Apesar disso, é possível contornar esse problema mudando de compilador. Existem três principais motores de compilação:
+
+\begin{description}
+	\item[\texttt{pdfLaTeX}:] O compilador padrão em grande parte das distribuições \TeX. É muito rápido e estável, mas limitado a fontes empacotadas especificamente para ele.
+	\item[\texttt{XeLaTeX} e \texttt{LuaLaTeX}:] São compiladores modernos. A grande vantagem deles é o suporte nativo a fontes do sistema através do pacote \texttt{fontspec}. Com eles, você pode usar qualquer fonte instalada no seu computador (como Arial, Helvetica ou Times New Roman) de forma direta, sem precisar de pacotes substitutos.
+\end{description}
+
+É importante notar que alguns pacotes antigos de fontes feitos para o \texttt{pdfLaTeX} podem não funcionar perfeitamente no \texttt{LuaLaTeX} e vice-versa. Por isso, ao escolher uma fonte, verifique sempre se ela é compatível com o compilador que você está utilizando no seu projeto.
+
+Considerando todos esses elementos em potencial, para trocar uma fonte, basta realizar a inclusão de um pacote que contenha a sua fonte de escolha no preâmbulo do documento:
+
+Para o \texttt{pdflatex}: 
+
+\begin{lstlisting} 
+	\usepackage[T1]{fontenc} % Garante a codificacão correta de caracteres 
+	\usepackage{newtxtext}% Exemplo de pacote similar ao Times New Roman para o pdflatex 
+\end{lstlisting}
+
+Para o \texttt{XeLaTeX} ou \texttt{LuaLaTeX}:
+
+\begin{lstlisting} 
+	\usepackage{fontspec} 
+	\setmainfont{Arial} % Ao usar XeLaTeX/LuaLaTeX, você pode chamar qualquer fonte instalada no seu sistema pelo nome exato dela. 
+\end{lstlisting}
+
+No caso do \texttt{fontspec}, a grande diferença é que não é necessário um pacote específico para cada fonte (como o \texttt{newtxtext}). Basta carregar o pacote e indicar ao \LaTeX\hspace{1pt} qual fonte do seu sistema operacional deve ser utilizada como fonte principal.
+
+\subsubsection{Pulando linhas por padrão}
+O \LaTeX\hspace{1pt} não pula linhas por padrão. Como foi mencionado no documento \texttt{aula-1.pdf}, normalmente, são usados comandos que realizam essa tarefa:
+
+\begin{lstlisting}
+	\\ % Pula linha
+	\newline % Também pula linha
+\end{lstlisting}
+
+Para resolver esse problema, é possível importar um pacote conhecido como \texttt{parskip}. Quando ele é utilizado, as linhas são puladas naturalmente quand há um espaço em branco, da forma que o texto é escrito.
+
+\begin{lstlisting}
+	\usepackage{parskip} % Pula linhas por padrão
+\end{lstlisting}
+
+\section{Referências Bibliográficas}
+
+\section{Formatação Avançada}
+
+\section{Resolvendo Problemas do Compilador}
 
 
 

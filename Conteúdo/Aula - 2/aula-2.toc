@@ -4,3 +4,8 @@
 \contentsline {subsection}{\numberline {2.1}Como Encontrar Pacotes?}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Utilizando Pacotes}{2}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Posicionando Imagens}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Trocando de Fontes}{3}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Pulando linhas por padrão}{4}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}Referências Bibliográficas}{4}{section.3}%
+\contentsline {section}{\numberline {4}Formatação Avançada}{4}{section.4}%
+\contentsline {section}{\numberline {5}Resolvendo Problemas do Compilador}{4}{section.5}%
