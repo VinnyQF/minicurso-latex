@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  5 FEB 2026 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  6 FEB 2026 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,7 +345,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 )
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
-4.
+5.
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -357,24 +357,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./aula-2.aux)
 \openout1 = `aula-2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -409,20 +409,20 @@ LaTeX Font Info:    ... okay on input line 104.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 104.
-Package microtype Info: Applying patch `item' on input line 104.
-Package microtype Info: Applying patch `toc' on input line 104.
-Package microtype Info: Applying patch `eqnum' on input line 104.
-Package microtype Info: Applying patch `footnote' on input line 104.
-Package microtype Info: Applying patch `verbatim' on input line 104.
-LaTeX Info: Redefining \microtypesetup on input line 104.
+LaTeX Info: Redefining \microtypecontext on input line 105.
+Package microtype Info: Applying patch `item' on input line 105.
+Package microtype Info: Applying patch `toc' on input line 105.
+Package microtype Info: Applying patch `eqnum' on input line 105.
+Package microtype Info: Applying patch `footnote' on input line 105.
+Package microtype Info: Applying patch `verbatim' on input line 105.
+LaTeX Info: Redefining \microtypesetup on input line 105.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 104.
+LaTeX Info: Redefining \showhyphens on input line 105.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -453,46 +453,46 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count304
-Package hyperref Info: Link coloring OFF on input line 104.
+Package hyperref Info: Link coloring OFF on input line 105.
  (./aula-2.out)
 (./aula-2.out)
 \@outlinefile=\write3
 \openout3 = `aula-2.out'.
 
-<IMAGENS/LOGO.png, id=44, 569.4876pt x 569.2467pt>
+<IMAGENS/LOGO.png, id=52, 569.4876pt x 569.2467pt>
 File: IMAGENS/LOGO.png Graphic file (type png)
 <use IMAGENS/LOGO.png>
-Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 106.
+Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 107.
 (pdftex.def)             Requested size: 142.26378pt x 142.19841pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-06.
+07.
  (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-06.
+07.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-106.
+107.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-106.
+107.
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 106.
+(Font)              <17.28> on input line 107.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 106.
+(Font)              <12> on input line 107.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 106.
+(Font)              <10> on input line 107.
 
 
 [1
@@ -514,10 +514,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 \newpage
+l.111 \newpage
                [1]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-13.
+14.
  (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -526,7 +526,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-19.
+20.
 
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -534,25 +534,36 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 215.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 216.
 
 
 [3]
 
-[4] (./aula-2.aux)
+[4]
+
+[5]
+
+[6] (./aula-2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `aula-2.out' has not changed.
-(rerunfilecheck)             Checksum: 2B32185782EB40A74501DD65ED99C7C3;1688.
+
+
+Package rerunfilecheck Warning: File `aula-2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `aula-2.out':
+(rerunfilecheck)             Before: 688695EA1A0D37C0E67DF1311675226B;2053
+(rerunfilecheck)             After:  01CD381C2CCF14387D59E03B16114668;2356.
  ) 
 Here is how much of TeX's memory you used:
- 14511 strings out of 473190
- 228412 string characters out of 5722594
- 767705 words of memory out of 5000000
- 37458 multiletter control sequences out of 15000+600000
- 614725 words of font info for 116 fonts, out of 8000000 for 9000
+ 14556 strings out of 473190
+ 229036 string characters out of 5722594
+ 804708 words of memory out of 5000000
+ 37462 multiletter control sequences out of 15000+600000
+ 614985 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1003b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dis
@@ -562,10 +573,10 @@ exmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr
 /share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts
 /type1/public/lm/lmtt9.pfb>
-Output written on aula-2.pdf (5 pages, 296907 bytes).
+Output written on aula-2.pdf (7 pages, 309782 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 34390 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 34406 words of extra memory for PDF output out of 35830 (max. 10000000)
 

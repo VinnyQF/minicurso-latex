@@ -8,6 +8,7 @@
 \usepackage{lmodern}
 \usepackage{listings}
 \usepackage{setspace}
+
 \usepackage[colorlinks=false, linkcolor=blue]{hyperref}
 \usepackage{fancyhdr}
 \setlength{\parindent}{0pt}
@@ -252,7 +253,91 @@ Para resolver esse problema, é possível importar um pacote conhecido como \tex
 
 \section{Referências Bibliográficas}
 
+O processo de gerenciamento de referências bibliográficas no \LaTeX\hspace{1pt} é significativamente mais organizado e estruturado do que em processadores de texto convencionais. Para fazer com que uma referência apareça em um documento, é necessário seguir três etapas fundamentais:
+
+\begin{enumerate}
+	\item Criar um arquivo BibTeX com a extensão \texttt{.bib} contendo os metadados (autor, título, ano, etc.) da obra.
+	\item Configurar o documento principal e Indicar ao \LaTeX\hspace{1pt} qual o estilo da bibliografia e qual arquivo \texttt{.bib} deve ser lido.
+	\item Utilizar chaves de citação diretamente no corpo do documento.
+\end{enumerate}
+
+Exemplo de entrada no arquivo .bib:
+\begin{lstlisting}
+	@book{lamport94,
+		author    = "Leslie Lamport",
+		title     = "LaTeX: A Document Preparation System",
+		year      = "1994",
+		publisher = "Addison-Wesley"
+	}
+\end{lstlisting}
+
+Exemplo de comandos no documento principal:
+\begin{lstlisting}
+	Para citar este livro, utilizamos o comando \cite{lamport94}.
+	
+	% No final do documento, definimos o estilo e o arquivo:
+	\bibliographystyle{plain} % Define o estilo de formatacao
+	\bibliography{referencias} % Nome do seu arquivo .bib
+\end{lstlisting}
+
+Após esses passos, a lista de referências será gerada automaticamente, geralmente em ordem alfabética, no estilo e formatação escolhidos.
+
+\subsection{A Sintaxe do BibTeX}
+
+Um arquivo BibTeX funciona como um repositório de metadados bibliográficos. De forma análoga a formatos como XML ou JSON, ele armazena informações estruturadas que serão interpretadas pelo compilador \LaTeX\hspace{1pt} no momento da geração das referências.
+
+Nesse contexto, o aspecto mais importante é garantir que a sintaxe do arquivo esteja de acordo com o que o BibTeX e o \LaTeX\hspace{1pt} esperam. Erros de sintaxe ou de formatação podem impedir a correta geração da bibliografia ou causar resultados inesperados.
+
+De modo geral, a estrutura de um arquivo BibTeX segue as seguintes regras:
+
+\begin{itemize}
+	\item Cada referência é definida por uma \textit{entrada}, que sempre começa com o caractere \texttt{@}.
+	\item O tipo da entrada indica a natureza da referência, como \texttt{@book} (livros), \texttt{@article} (artigos científicos) e \texttt{@misc} (materiais que não se enquadram nas categorias anteriores).
+	\item Cada entrada possui um identificador único (chave), utilizado posteriormente para citar a referência no texto.
+	\item Dentro de cada entrada, são definidos os campos que descrevem os metadados da referência, como \texttt{author}, \texttt{title}, \texttt{year} e \texttt{journal}.
+\end{itemize}
+
+Um exmplo desse arquivo pode ser visto abaixo:
+
+\begin{lstlisting}
+	@article{einstein1905,
+		author  = "Albert Einstein",
+		title   = "Does the Inertia of a Body Depend Upon Its Energy Content?",
+		journal = "Annalen der Physik",
+		year    = "1905",
+		volume  = "18",
+		pages   = "639--641"
+	}
+\end{lstlisting}
+
+\textbf{Nota importante sobre autores:}  
+Para que o BibTeX identifique corretamente múltiplos autores, eles devem ser separados obrigatoriamente pela palavra \texttt{and}. Por exemplo:
+
+\begin{lstlisting}
+	author = "Fulano de Tal and Beltrano de Souza"
+\end{lstlisting}
+
+O uso de vírgulas para separar autores é incorreto nesse contexto, pois o BibTeX interpreta a vírgula como parte do nome de uma única pessoa, o que pode resultar em formatação incorreta das referências.
+
+
+
+\subsection{Referências no Padrão ABNT}
+
+Para a utilização de referências bibliográficas no padrão ABNT, é necessário empregar um pacote ou estilo bibliográfico especificamente configurado para esse formato.
+
+Uma das formas mais comuns de aplicar esse padrão é por meio de estilos bibliográficos compatíveis com a ABNT, que devem ser carregados no preâmbulo do documento. 
+
+Esses estilos são responsáveis por definir a forma como as referências serão exibidas na bibliografia final.
+
+\begin{lstlisting}
+	\usepackage{abntex2cite}[alf]
+\end{lstlisting}
+
 \section{Formatação Avançada}
+
+\subsection{Formatando em ABNT}
+
+\subsection{Formatando em SBC}
 
 \section{Resolvendo Problemas do Compilador}
 
