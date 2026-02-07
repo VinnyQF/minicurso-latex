@@ -335,9 +335,68 @@ Esses estilos são responsáveis por definir a forma como as referências serão
 
 \section{Formatação Avançada}
 
+Essa parte do documento irá focar no processo de formatação de documentos \LaTeX, elaborando sobre as formatações em ABNT e SBC. 
+
 \subsection{Formatando em ABNT}
 
+O padrão ABNT (Associação Brasileira de Normas Técnicas) define regras específicas para a apresentação de trabalhos acadêmicos, incluindo margens, espaçamentos, fontes, títulos, citações e referências bibliográficas.
+
+Devido à complexidade e à quantidade de normas envolvidas, não é recomendado aplicar o padrão ABNT manualmente em documentos \LaTeX. Em vez disso, a abordagem mais adequada é utilizar classes e pacotes desenvolvidos especificamente para esse fim.
+
+\subsubsection{Classe \texttt{abntex2}}
+
+A classe \texttt{abntex2} é a solução mais utilizada para a produção de documentos no padrão ABNT em \LaTeX. 
+
+Ela implementa as principais normas da ABNT, permitindo que o autor foque no conteúdo do texto, e não nos detalhes de formatação. Para utilizá-la, basta substituir a classe padrão do documento no preâmbulo:
+
+\begin{lstlisting}
+	\documentclass{abntex2}
+\end{lstlisting}
+
+
+\subsubsection{Observações Importantes}
+
+Não é possível descrever todos os elementos que compõem o funcionamento da classe \texttt{abntex2} em um único documento resumido. Para sua utilização adequada, é necessária a leitura da documentação oficial.
+
+A documentação completa da classe está disponível no repositório correspondente, na seção de arquivos PDF, sendo disponibilizada em anexo à aula 2 por conveniência.
+
 \subsection{Formatando em SBC}
+
+A formatação no padrão SBC utiliza um modelo distinto do formato ABNT. Nesse caso, é necessário carregar um arquivo de estilização com extensão \texttt{.sty}, fornecido pela própria Sociedade Brasileira de Computação (SBC).
+
+Após a inclusão desse template no documento, a formatação passa a seguir automaticamente as normas e diretrizes definidas pela revista ou evento. Esse comportamento é comum na maioria das publicações científicas que utilizam \LaTeX, nas quais o estilo visual é totalmente controlado por arquivos de classe ou de estilização.
+
+Em comparação com o modelo ABNT, o padrão SBC apresenta um processo de configuração mais simples, exigindo menos ajustes manuais por parte do autor.
+
+\subsection{Arquivos \texttt{.sty}}
+
+Arquivos com extensão \texttt{.sty} são conhecidos como \textit{style files} e têm a função de definir regras de formatação, comportamento e macros adicionais para documentos \LaTeX.
+
+Um arquivo \texttt{.sty} age como um arquivo de texto contendo comandos \LaTeX, de forma semelhante ao que é escrito diretamente no preâmbulo de um documento.
+
+A diferença é que essas configurações ficam organizadas em um único arquivo, facilitando a padronização visual e estrutural.
+
+Ao incluir um arquivo \texttt{.sty} em um documento, o autor delega ao template a responsabilidade pela formatação. Isso pode envolver, por exemplo:
+\begin{itemize}
+	\item Definição de margens e espaçamentos;
+	\item Escolha de fontes e tamanhos de texto;
+	\item Estilo de títulos, seções e cabeçalhos;
+	\item Formatação de citações, referências e legendas;
+	\item Criação de novos comandos e ambientes.
+\end{itemize}
+
+A inclusão de um arquivo \texttt{.sty} é feita por meio do comando \texttt{\textbackslash usepackage\{\}}, desde que o arquivo esteja disponível no mesmo diretório do documento ou em um diretório conhecido pelo compilador:
+
+\begin{lstlisting}
+	\usepackage{nomedoestilo}
+\end{lstlisting}
+
+Não é necessário especificar a extensão \texttt{.sty}, pois o \LaTeX\hspace{1pt} identifica automaticamente o tipo do arquivo.
+
+No contexto acadêmico, arquivos \texttt{.sty} são amplamente utilizados por revistas, congressos e instituições para garantir que todos os trabalhos submetidos sigam exatamente o mesmo padrão visual, independentemente do autor ou do editor utilizado.
+
+O arquivo de estilização padrão para a revista SBC está disponível nesse repositório para consulta e/ou utilização.
+
 
 \section{Resolvendo Problemas do Compilador}
 
