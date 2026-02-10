@@ -6,8 +6,9 @@
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{listings}
+\usepackage{listings, soul}
 \usepackage{setspace}
+\usepackage{xcolor}
 
 \usepackage[colorlinks=false, linkcolor=blue]{hyperref}
 \usepackage{fancyhdr}
@@ -28,15 +29,37 @@
 \renewcommand{\footrulewidth}{0.4pt}  
 
 
+\definecolor{latexblue}{RGB}{0,0,180}
+\definecolor{latexgreen}{RGB}{0,130,0}
+\definecolor{latexred}{RGB}{180,0,0}
+\definecolor{latexgray}{RGB}{90,90,90}
+\definecolor{lstgray}{gray}{0.95}
+
+
+\lstdefinestyle{base}{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	numbers=left,
+	numbersep=8pt,
+	framexleftmargin=10pt,
+	xleftmargin=0pt,
+}
 
 
 \lstset{
 	basicstyle=\ttfamily\small,
 	frame=single,
+	framesep=5pt,
+	backgroundcolor=\color{lstgray},	
 	breaklines=true,
-	showstringspaces=false,
 	extendedchars=true,
 	inputencoding=utf8,
+	numbers=left,
+	numberstyle=\color{gray},
+	numbersep=8pt,
+	xleftmargin=0pt,
+	framexleftmargin=10pt,	
 	literate=
 	{á}{{\'a}}1
 	{à}{{\`a}}1
@@ -63,6 +86,62 @@
 	{Ú}{{\'U}}1
 	{Ç}{{\c C}}1
 }
+
+
+\lstnewenvironment{teX}[1][]
+{\lstset{
+		language=[LaTeX]TeX,
+		escapeinside={(*@}{@*)},
+		breaklines=true,
+		framesep=5pt,
+		basicstyle=\normalsize\ttfamily,
+		showstringspaces=false,
+		keywordstyle=\color{latexblue},
+		stringstyle=\color{maroon},
+		commentstyle=\color{latexgreen},
+		rulecolor=\color{black},
+		numbers=left,		
+		xleftmargin=0pt,
+		xrightmargin=0pt,
+		framexleftmargin=10pt,			
+		aboveskip=\medskipamount,
+		belowskip=\medskipamount,
+		backgroundcolor=\color{white},
+		morekeywords={usepackage,begin,end,documentclass,includegraphics, setmainfont},
+		#1
+}}
+{}
+
+\lstdefinestyle{latexerror}{
+	basicstyle=\ttfamily\small\color{red},
+	breaklines=true,
+	showstringspaces=false
+}
+
+
+
+\lstdefinestyle{bibtex}{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	commentstyle=\color{latexgreen},
+	stringstyle=\color{latexred},
+	keywordstyle=\color{latexblue}\bfseries,
+	numbers=left,
+	numbersep=8pt,
+	framexleftmargin=10pt,
+	xleftmargin=0pt,
+	morekeywords={
+		@article,@book,@misc,@inproceedings,@phdthesis,@mastersthesis,
+		author,title,journal,year,volume,number,pages,publisher,editor,
+		address,edition,month,note,school,organization
+	},
+	alsoletter={@},
+	extendedchars=true,
+	inputencoding=utf8,
+}
+
 
 \geometry{
 	a4paper,
@@ -120,6 +199,7 @@ Seu objetivo é introduzir conteúdos mais avançados do \LaTeX, focando nos seg
 	\item Gerenciamento de Pacotes
 	\item Referências Bibliográficas
 	\item Formatação Avançada (ABNT, SBC)
+	\item Resolvendo Problemas de Compilação
 \end{itemize}
 
 
@@ -153,25 +233,25 @@ Esse pacote permite um controle mais explícito sobre o posicionamento de imagen
 
 Para utilizar esse pacote, é necessário incluí-lo no preâmbulo do documento, conforme apresentado no documento \texttt{``aula-1.pdf''}:
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage{float}
-\end{lstlisting}
+\end{teX}
 
 Após a inclusão do pacote, imagens devem ser inseridas por meio do ambiente \texttt{figure}, que é o ambiente padrão do \LaTeX\ para a inclusão de elementos gráficos:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{figure}
 		\includegraphics{exemplo.jpg}
 	\end{figure}
-\end{lstlisting}
+\end{teX}
 
 Esse ambiente pode receber parâmetros adicionais que influenciam o posicionamento da imagem no documento, por meio da seguinte sintaxe:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{figure}[x]
 		\includegraphics{exemplo.jpg}
 	\end{figure}
-\end{lstlisting}
+\end{teX}
 
 Nesse caso, o parâmetro \texttt{x} pode ser substituído por diferentes opções de posicionamento. As opções mais comuns são apresentadas a seguir:
 
@@ -185,12 +265,12 @@ Nesse caso, o parâmetro \texttt{x} pode ser substituído por diferentes opçõe
 
 Essas opções podem ser combinadas para oferecer maior flexibilidade ao compilador. Por exemplo:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics{exemplo.jpg}
 	\end{figure}
-\end{lstlisting}
+\end{teX}
 
 Nesse caso, o \LaTeX\ tentará posicionar a imagem primeiro no local do código e, caso isso não seja possível, no topo da página. Outro elemento interessante vêm através da adição do comando \texttt{\textbackslash centering}, que centraliza a imagem presente no ambiente \texttt{figure}.
 
@@ -222,33 +302,33 @@ Considerando todos esses elementos em potencial, para trocar uma fonte, basta re
 
 Para o \texttt{pdflatex}: 
 
-\begin{lstlisting} 
+\begin{teX} 
 	\usepackage[T1]{fontenc} % Garante a codificacão correta de caracteres 
 	\usepackage{newtxtext}% Exemplo de pacote similar ao Times New Roman para o pdflatex 
-\end{lstlisting}
+\end{teX}
 
 Para o \texttt{XeLaTeX} ou \texttt{LuaLaTeX}:
 
-\begin{lstlisting} 
+\begin{teX} 
 	\usepackage{fontspec} 
 	\setmainfont{Arial} % Ao usar XeLaTeX/LuaLaTeX, você pode chamar qualquer fonte instalada no seu sistema pelo nome exato dela. 
-\end{lstlisting}
+\end{teX}
 
 No caso do \texttt{fontspec}, a grande diferença é que não é necessário um pacote específico para cada fonte (como o \texttt{newtxtext}). Basta carregar o pacote e indicar ao \LaTeX\hspace{1pt} qual fonte do seu sistema operacional deve ser utilizada como fonte principal.
 
 \subsubsection{Pulando linhas por padrão}
 O \LaTeX\hspace{1pt} não pula linhas por padrão. Como foi mencionado no documento \texttt{aula-1.pdf}, normalmente, são usados comandos que realizam essa tarefa:
 
-\begin{lstlisting}
+\begin{teX}
 	\\ % Pula linha
 	\newline % Também pula linha
-\end{lstlisting}
+\end{teX}
 
 Para resolver esse problema, é possível importar um pacote conhecido como \texttt{parskip}. Quando ele é utilizado, as linhas são puladas naturalmente quand há um espaço em branco, da forma que o texto é escrito.
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage{parskip} % Pula linhas por padrão
-\end{lstlisting}
+\end{teX}
 
 \section{Referências Bibliográficas}
 
@@ -261,7 +341,7 @@ O processo de gerenciamento de referências bibliográficas no \LaTeX\hspace{1pt
 \end{enumerate}
 
 Exemplo de entrada no arquivo .bib:
-\begin{lstlisting}
+\begin{lstlisting}[style=bibtex]
 	@book{lamport94,
 		author    = "Leslie Lamport",
 		title     = "LaTeX: A Document Preparation System",
@@ -271,20 +351,20 @@ Exemplo de entrada no arquivo .bib:
 \end{lstlisting}
 
 Exemplo de comandos no documento principal:
-\begin{lstlisting}
-	Para citar este livro, utilizamos o comando \cite{lamport94}.
+\begin{teX}
+	% Para citar este livro, utilizamos o comando \cite{lamport94}.
 	
 	% No final do documento, definimos o estilo e o arquivo:
 	\bibliographystyle{plain} % Define o estilo de formatacao
 	\bibliography{referencias} % Nome do seu arquivo .bib
-\end{lstlisting}
+\end{teX}
 
 Após esses passos, a lista de referências será gerada automaticamente, geralmente em ordem alfabética, no estilo e formatação escolhidos.
 
 \subsection{A Sintaxe do BibTeX}
 
 Um arquivo BibTeX funciona como um repositório de metadados bibliográficos. De forma análoga a formatos como XML ou JSON, ele armazena informações estruturadas que serão interpretadas pelo compilador \LaTeX\hspace{1pt} no momento da geração das referências.
-
+teX
 Nesse contexto, o aspecto mais importante é garantir que a sintaxe do arquivo esteja de acordo com o que o BibTeX e o \LaTeX\hspace{1pt} esperam. Erros de sintaxe ou de formatação podem impedir a correta geração da bibliografia ou causar resultados inesperados.
 
 De modo geral, a estrutura de um arquivo BibTeX segue as seguintes regras:
@@ -298,7 +378,7 @@ De modo geral, a estrutura de um arquivo BibTeX segue as seguintes regras:
 
 Um exmplo desse arquivo pode ser visto abaixo:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=bibtex]
 	@article{einstein1905,
 		author  = "Albert Einstein",
 		title   = "Does the Inertia of a Body Depend Upon Its Energy Content?",
@@ -312,7 +392,7 @@ Um exmplo desse arquivo pode ser visto abaixo:
 \textbf{Nota importante sobre autores:}  
 Para que o BibTeX identifique corretamente múltiplos autores, eles devem ser separados obrigatoriamente pela palavra \texttt{and}. Por exemplo:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=bibtex]
 	author = "Fulano de Tal and Beltrano de Souza"
 \end{lstlisting}
 
@@ -328,9 +408,9 @@ Uma das formas mais comuns de aplicar esse padrão é por meio de estilos biblio
 
 Esses estilos são responsáveis por definir a forma como as referências serão exibidas na bibliografia final.
 
-\begin{lstlisting}
-	\usepackage{abntex2cite}[alf]
-\end{lstlisting}
+\begin{teX}
+	\usepackage[alf]{abntex2cite}
+\end{teX}
 
 \section{Formatação Avançada}
 
@@ -348,9 +428,9 @@ A classe \texttt{abntex2} é a solução mais utilizada para a produção de doc
 
 Ela implementa as principais normas da ABNT, permitindo que o autor foque no conteúdo do texto, e não nos detalhes de formatação. Para utilizá-la, basta substituir a classe padrão do documento no preâmbulo:
 
-\begin{lstlisting}
+\begin{teX}
 	\documentclass{abntex2}
-\end{lstlisting}
+\end{teX}
 
 
 \subsubsection{Observação Importante}
@@ -381,14 +461,14 @@ Ao incluir um arquivo \texttt{.sty} em um documento, o autor delega ao template 
 	\item Escolha de fontes e tamanhos de texto;
 	\item Estilo de títulos, seções e cabeçalhos;
 	\item Formatação de citações, referências e legendas;
-	\item Criação de novos comandos e ambientes.
+	\item Criação de novos comandos e ambientes.	
 \end{itemize}
 
 A inclusão de um arquivo \texttt{.sty} é feita por meio do comando \texttt{\textbackslash usepackage\{\}}, desde que o arquivo esteja disponível no mesmo diretório do documento ou em um diretório conhecido pelo compilador:
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage{nomedoestilo}
-\end{lstlisting}
+\end{teX}
 
 Não é necessário especificar a extensão \texttt{.sty}, pois o \LaTeX\hspace{1pt} identifica automaticamente o tipo do arquivo.
 
@@ -396,6 +476,127 @@ No contexto acadêmico, arquivos \texttt{.sty} são amplamente utilizados por re
 
 O arquivo de estilização padrão para a revista SBC está disponível nesse repositório para consulta e/ou utilização.
 
+\section{Resolvendo Problemas de Compilação}
 
+Durante o uso do \LaTeX, é comum encontrar erros ou avisos durante o processo de compilação. Diferentemente de processadores de texto tradicionais, o \LaTeX\hspace{1pt} depende da correta interpretação do código para gerar o documento final, e pequenos erros de sintaxe podem impedir a compilação ou gerar resultados inesperados.
+
+O objetivo dessa seção mora no desenvolvimento da habilidade investigativa e de solução de problemas quando algum erro de compilação aparecer.
+
+\subsection{Erros e Avisos}
+
+O compilador \LaTeX\hspace{1pt} pode emitir dois tipos principais de mensagens:
+
+\begin{itemize}
+	\item \textbf{Erros}: Interrompem o processo de compilação e podem impedir a geração do PDF. A maioria dos editores de texto irá identificar um desses momentos com uma linha vermelha. 
+	\begin{itemize}
+		\item Existe um cenário onde um erro pode acontecer, mas um PDF ainda pode ser gerado. Nesses casos, é possível perceber grandes problemas na formatação e/ou aparência do documento.
+	\end{itemize}
+	\item \textbf{Avisos} (\texttt{warnings}): Não impedem a compilação, mas indicam possíveis problemas de formatação ou inconsistências no documento.
+	\begin{itemize}
+		\item Um exemplo disso acontece quando as margens de um determinado documento não estão atendendo o critério do \LaTeX, ou seja, as margens foram ``relaxadas''. Isso não interfere de forma visual e direta na qualidade do documento final, sendo algo orientado à interpretação do compilador em si.
+	\end{itemize}
+\end{itemize}
+
+É importante corrigir os erros assim que possível, fazer o contrário significa acumular inconsistências em um documento sem necessidade. Avisos, embora menos críticos, também merecem atenção, especialmente em documentos acadêmicos.
+
+\subsubsection{Leitura das Mensagens de Erro}
+
+As mensagens exibidas pelo compilador geralmente indicam:
+\begin{itemize}
+	\item O tipo de erro encontrado;
+	\item O arquivo em que o erro ocorreu;
+	\item A linha aproximada onde o problema foi detectado.
+\end{itemize}
+
+É importante observar que a linha indicada nem sempre corresponde exatamente ao local do erro, pois um problema pode ser causado por comandos mal formados em linhas anteriores.
+
+Segue abaixo um exemplo de mensagem de erro gerada durante a compilação de um documento \LaTeX\hspace{1pt}:
+
+\begin{lstlisting}[style=latexerror]
+	! Missing } inserted.
+	<inserted text> 
+	}
+	l.27 \section{Introdução
+\end{lstlisting}
+
+Nesse exemplo, a mensagem pode ser interpretada da seguinte forma:
+
+\begin{itemize}
+\item \texttt{Missing \} inserted}: indica que o compilador esperava encontrar uma chave de fechamento (\texttt{\}}) que não foi informada corretamente.
+\item \texttt{l.27}: informa a linha aproximada onde o problema foi detectado.
+\item \texttt{\textbackslash section\{Introdução}: mostra o comando que estava sendo processado no momento em que o erro ocorreu.
+\end{itemize}
+
+Embora o erro seja apontado na linha 27, o problema pode ter sido causado por uma chave aberta em uma linha anterior. Um compilador não necessariamente irá fornecer o ponto exato onde um problema aconteceu, mas uma aproximação pode ser indicada, por isso, é interessante verificar regiões próximas ao que foi indicado.
+
+
+\subsubsection{Erros Comuns}
+
+Alguns dos erros mais frequentes para usuários iniciantes incluem:
+
+\begin{itemize}
+	\item Chaves não balanceadas (\texttt{\{} sem \texttt{\}});
+	\begin{itemize}
+		\item Quando isso acontece, o compilador ainda pode inserir os elementos faltantes automaticamente durante compilação. Quando isso acontece, o seu editor de texto ainda pode pontuar o problema, mas o compilador do \LaTeX\hspace{1pt} irá apresentar a situação apenas como um aviso (\texttt{warning}).
+	\end{itemize}
+	\item Ambientes não fechados corretamente (por exemplo, \texttt{figure} sem \texttt{end});
+	\begin{itemize}
+		\item Esse é um caso um pouco mais crítico. Quando isso acontece, o compilador ainda consegue criar um documento em grande parte das situações, mas um erro irá ser pontuado para correção, conforme o exemplo abaixo:
+		
+		\begin{lstlisting}[style=latexerror]
+	aula-2.tex: erro: 
+	498: \begin{itemize} on input line 458 ended by \end{document}.
+		\end{lstlisting}
+		
+		Neste caso, como não havia um ponto de fechamento para o ambiente \texttt{itemize} criado, o ambiente estava sendo fechado em \texttt{end\{document\}}. Apesar disso, um documento ainda foi gerado.
+	\end{itemize}
+	\item Uso de comandos matemáticos fora do modo matemático;
+	\begin{itemize}
+		\item Quando isso acontece, o compilador irá apresentar uma mensagem de erro, e o seu editor de texto/IDE poderá apontar o trecho em vermelho, assim como no caso de chaves não balanceadas. Apesar disso, um PDF ainda será gerado.
+	\end{itemize}
+	\item Inclusão de pacotes inexistentes ou não instalados;
+	\begin{itemize}
+	\item Este é um caso onde um documento pode não ser gerado. Quando um pacote inexistente é incluso, ou um pacote que não foi instalado é incluso, existe uma chance considerável do compilador falhar em sua tarefa, mesmo considerando as possibilidades de recuperação. 
+	
+	Quando isso acontece, o compilador do \LaTeX\hspace{1pt} cria uma mensagem de erro que informa a não compilação de um PDF:
+	
+	\begin{teX}
+	\usepackage{pacoteinexistente}
+	\end{teX}
+	
+	Durante a compilação, o \LaTeX\hspace{1pt} poderá gerar uma mensagem semelhante à seguinte:
+	
+	\begin{lstlisting}[style=latexerror]
+	! LaTeX Error: File `pacoteinexistente.sty' not found.
+		
+	Type X to quit or <RETURN> to proceed,
+	or enter new name. (Default extension: sty)
+	\end{lstlisting}
+	
+	\end{itemize}
+	\item Caracteres especiais não escapados, como \texttt{\_} e \texttt{\#}.
+	\begin{itemize}
+		\item Quando isso acontece, seu editor de texto/IDE irá marcar o ponto de falha em vermelho. A única solução para esse tipo de situação é adicionar uma \{\textbackslash\} antes de um elemento:
+		
+		\begin{teX}
+	% Algo como:
+	Um exemplo de frase com esse tipo_de_problema
+	% Deve ser corrigido para:
+	Um exemplo de frase com esse tipo\_de\_problema
+		\end{teX}
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Fontes de Consulta}
+
+Quando um erro não pode ser resolvido facilmente, é recomendado consultar fontes externas confiáveis, como:
+\begin{itemize}
+	\item A documentação oficial do \LaTeX\hspace{1pt} e dos pacotes utilizados;
+	\item Fóruns especializados, como \textit{TeX Stack Exchange};
+	\item Exemplos funcionais fornecidos por templates oficiais.
+\end{itemize}
+
+Apesar das descrições existentes neste documento, a única forma de aprender a resolver erros de compilação de documentos em PDF utilizando o \LaTeX\hspace{1pt} é diretamente praticando a solução de problemas quando um desafio aparece.
 
 \end{document}
