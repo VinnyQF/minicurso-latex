@@ -1,6 +1,4 @@
 # minicurso-latex
-<<<<<<< HEAD
-
 Repositório contendo o minicurso de LaTeX lecionado na Unijorge como parte do curso de férias realizado em fevereiro de 2026.
 
 ## Navegação Básica
@@ -61,4 +59,3 @@ Todo o conteúdo, já em formato de PDF, para fácil acesso e consulta.
 
 ### Espelho alternativo
 [Link para o proton-drive da disciplina](https://drive.proton.me/urls/59D9KC9WE0#ourbr9aktHC2) 
->>>>>>> main
