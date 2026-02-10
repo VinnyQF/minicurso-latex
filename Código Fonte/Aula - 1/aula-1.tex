@@ -12,11 +12,16 @@
 \usepackage{fancyhdr}
 \setlength{\parindent}{0pt}
 \pagestyle{fancy} 
+\usepackage{xcolor}
 
 % Limpa os campos padrão
 \fancyhf{}
 
-
+\definecolor{latexblue}{RGB}{0,0,180}
+\definecolor{latexgreen}{RGB}{0,130,0}
+\definecolor{latexred}{RGB}{180,0,0}
+\definecolor{latexgray}{RGB}{90,90,90}
+\definecolor{lstgray}{gray}{0.95}
 
 % Rodapé
 \fancyfoot[L]{Centro Universitário Jorge Amado}
@@ -28,13 +33,30 @@
 
 
 
-\lstset{
+\lstdefinestyle{base}{
 	basicstyle=\ttfamily\small,
 	frame=single,
 	breaklines=true,
-	showstringspaces=false,
+	numbers=left,
+	numbersep=8pt,
+	framexleftmargin=10pt,
+	xleftmargin=0pt,
+}
+
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	framesep=5pt,
+	backgroundcolor=\color{lstgray},	
+	breaklines=true,
 	extendedchars=true,
 	inputencoding=utf8,
+	numbers=left,
+	numberstyle=\color{gray},
+	numbersep=8pt,
+	xleftmargin=0pt,
+	framexleftmargin=10pt,	
 	literate=
 	{á}{{\'a}}1
 	{à}{{\`a}}1
@@ -62,6 +84,55 @@
 	{Ç}{{\c C}}1
 }
 
+
+\lstnewenvironment{teX}[1][]
+{\lstset{
+		language=[LaTeX]TeX,
+		escapeinside={(*@}{@*)},
+		breaklines=true,
+		framesep=5pt,
+		basicstyle=\normalsize\ttfamily,
+		showstringspaces=false,
+		keywordstyle=\color{latexblue},
+		stringstyle=\color{maroon},
+		commentstyle=\color{latexgreen},
+		rulecolor=\color{black},
+		numbers=left,		
+		xleftmargin=0pt,
+		xrightmargin=0pt,
+		framexleftmargin=10pt,			
+		aboveskip=\medskipamount,
+		belowskip=\medskipamount,
+		backgroundcolor=\color{white},
+		morekeywords={usepackage,begin,end,documentclass,includegraphics, setmainfont, comando},
+		#1
+}}
+{}
+
+
+
+\lstdefinestyle{bibtex}{
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	commentstyle=\color{latexgreen},
+	stringstyle=\color{latexred},
+	keywordstyle=\color{latexblue}\bfseries,
+	numbers=left,
+	numbersep=8pt,
+	framexleftmargin=10pt,
+	xleftmargin=0pt,
+	morekeywords={
+		@article,@book,@misc,@inproceedings,@phdthesis,@mastersthesis,
+		author,title,journal,year,volume,number,pages,publisher,editor,
+		address,edition,month,note,school,organization
+	},
+	alsoletter={@},
+	extendedchars=true,
+	inputencoding=utf8,
+}
+
 \geometry{
 	a4paper,
 	left=3cm,
@@ -73,8 +144,8 @@
 
 % Configurações da Capa
 \author{Vinícius Queiroz Fonseca}
-\date{14 de Janeiro de 2026}
-\title{Aula 1 - Tutorial de \LaTeX \hspace{1pt} básico}
+\date{10 de Fevereiro de 2026}
+\title{Aula 1 - Tutorial de teX \hspace{1pt} básico}
 
 \makeatletter
 \renewcommand{\maketitle}{
@@ -124,15 +195,15 @@ Um comando, também conhecido como ``macro'' em LaTeX geralmente começa com uma
 
 Essa é a sintaxe básica de um comando:
 
-\begin{lstlisting}
+\begin{teX}
 	\comando
-\end{lstlisting}
+\end{teX}
 
 Caso esse comando tenha opções, essa é a sintaxe:
 
-\begin{lstlisting}
+\begin{teX}
 	\comando[parâmetro opcional]{parâmetro obrigatório}
-\end{lstlisting}
+\end{teX}
 
 \textbf{Alguns comandos básicos do LaTeX incluem:}
 
@@ -154,19 +225,19 @@ Ambientes delimitam blocos de conteúdo e são definidos entre os comandos \text
 
 Essa é a sintaxe básica de um ambiente genérico:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{ambiente}      % Início do ambiente
 	conteúdo...
 	\end{ambiente}         % Fim do ambiente
-\end{lstlisting}
+\end{teX}
 
 \subsection{Comentários:}
 
 Comentários em LaTeX são iniciados com o símbolo ``\%''. Tudo que estiver na linha após este símbolo é ignorado pelo compilador.
 
-\begin{lstlisting}
+\begin{teX}
 	% Isto é um comentário e não aparece no PDF
-\end{lstlisting}
+\end{teX}
 
 
 
@@ -204,9 +275,9 @@ Outras classes comuns incluem:
 
 Para escolher uma classe de um documento, basta adicionar uma linha no preâmbulo contendo a informação geral dessa classe. Por exemplo:
 
-\begin{lstlisting}
+\begin{teX}
 	\documentclass{article}
-\end{lstlisting}
+\end{teX}
 
 \subsection{Importando Pacotes:}
 
@@ -216,32 +287,32 @@ O porém mora em uma ausência de documentação direta, então a melhor forma d
 
 
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage{pacote}
-\end{lstlisting}
+\end{teX}
 
 Alguns pacotes podem conter opções adicionais. Nesses casos, podem haver situações como essa:
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage[opções]{pacote}
-\end{lstlisting}
+\end{teX}
 
 Para a construção do seu primeiro documento, esta lista de pacotes deve ser o suficiente:
 
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage[brazil]{babel} % Suporte ao idioma português
 	\usepackage[T1]{fontenc} % Codificação adequada da fonte fonte
 	\usepackage{lmodern}  % Fonte Latin Modern
 	\usepackage{graphicx} % Inserção de imagens
 	\usepackage{microtype} % Melhora a tipografia do texto
-\end{lstlisting}
+\end{teX}
 
 É importante ressaltar que um preâmbulo pode crescer a depender da quantidade de pacotes que um documento utilizar. Uma forma de mitigar o tamanho do preâmbulo é fazendo importações múltiplas de pacotes, utilizando a seguinte sintaxe:
 
-\begin{lstlisting}
+\begin{teX}
 	\usepackage[opção global]{pacote1, pacote2, pacote...}
-\end{lstlisting}
+\end{teX}
 
 Embora seja possível importar vários pacotes em uma única linha, as opções informadas são aplicadas a todos os pacotes listados. Por isso, essa forma deve ser usada com cautela, especialmente quando os pacotes exigem configurações distintas.
 
@@ -251,11 +322,11 @@ O primeiro passo de construção de um documento simples em LaTeX é a criação
 
 Para fazer isso, basta adicionar uma estrutura semelhante a essa como o primeiro elemento do seu documento:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{document}
 		Todo o resto do documento aqui.
 	\end{document}
-\end{lstlisting}
+\end{teX}
 
 \section{Criando um Título:}
 
@@ -263,46 +334,46 @@ Para o nosso primeiro documento, é importante ter um título básico como mecan
 
 No LaTeX, isso é feito preenchendo três macros principais no preâmbulo:
 
-\begin{lstlisting}
+\begin{teX}
 	\author{nome do autor}
 	\date{data do documento}
 	\title{título do documento}
-\end{lstlisting}
+\end{teX}
 
 \subsection{A Macro \texttt{\textbackslash author}}
 
 A macro \texttt{\textbackslash author\{\}} define o nome do autor do documento. É comum incluir apenas o nome completo, mas também é possível adicionar informações adicionais, como filiação institucional:
 
-\begin{lstlisting}
+\begin{teX}
 	\author{Vinícius Queiroz Fonseca \\ Centro Universitário Jorge Amado}
-\end{lstlisting}
+\end{teX}
 
 \subsection{A Macro \texttt{\textbackslash date}}
 
 A macro \texttt{\textbackslash date\{\}} define a data que aparecerá no título do documento. Caso você não queira especificar uma data, é possível deixar o campo em branco ou usar a macro \texttt{\textbackslash today} para inserir a data do dia da compilação automaticamente:
 
-\begin{lstlisting}
+\begin{teX}
 	\date{\today} % Insere a data atual
-\end{lstlisting}
+\end{teX}
 
 \subsection{A Macro \texttt{\textbackslash title}}
 
 A macro \texttt{\textbackslash title\{\}} define o título do documento. Tente manter o título claro e conciso, de preferência com poucas palavras, para facilitar a identificação do tema principal.
 
-\begin{lstlisting}
+\begin{teX}
 	\title{Aula 1 - Introdução ao LaTeX}
-\end{lstlisting}
+\end{teX}
 
 \subsection{Gerando o Título no Documento}
 
 Depois de definir essas macros no preâmbulo, o título é inserido no documento através do comando \texttt{\textbackslash maketitle}, que deve ser colocado logo após o início do ambiente \texttt{document}:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{document}
 		\maketitle
 		...
 	\end{document}
-\end{lstlisting}
+\end{teX}
 
 O LaTeX irá gerar automaticamente o título, mostrando o nome do autor, a data e o título conforme especificado, formatando-os de forma padronizada e profissional.
 
@@ -313,9 +384,9 @@ Para o LaTeX, seções são numeradas automaticamente. Elas contém um título m
 
 Quem determina a ordem de numeração é o chamado do comando \texttt{\textbackslash section\{\}}, ou seja, qualquer seção que for criada após uma seção original será numerada em ordem crescente, seguindo o padrão \{1\}.
 
-\begin{lstlisting}
+\begin{teX}
 	\section{Exemplo de Seção}
-\end{lstlisting}
+\end{teX}
 
 \section{Exemplo de uma nova seção:}
 
@@ -325,37 +396,37 @@ Como pode ser observado, essa seção já apresenta a numeração correta.
 
 Subseções seguem o mesmo princípio de funcionamento, iterando em \{1.1\} em sequência à última seção conhecida. Elas podem ser chamadas pelo comando \texttt{\textbackslash subsection\{\}}.
 
-\begin{lstlisting}
+\begin{teX}
 	\subsection{Exemplo de Subseção}
-\end{lstlisting}
+\end{teX}
 
 \subsubsection{Criando uma Subsubseção:}
 
 Por fim. Nós temos as subsubseções, que são iteradas em \{1.1.1\}, em sequência à uma última seção ou subseção conhecida. Normalmente subsubseções são precedidas de uma seção, mas isso não necessariamente é algo obrigatório. Elas podem ser chamadas pelo comando \texttt{\textbackslash subsubsection\{\}}.
 
-\begin{lstlisting}
+\begin{teX}
 	\subsubsection{Exemplo de Subsubseção}
-\end{lstlisting}
+\end{teX}
 
 \paragraph{Isso é um Parágrafo:}
 
 O comando \texttt{\textbackslash paragraph\{\}} cria um título de parágrafo. Seu comportamento visual pode variar conforme a classe do documento. A quebra de linha não acontece por padrão quando um título de parágrafo é inserido.
-\begin{lstlisting}
+\begin{teX}
 	\paragraph{Exemplo de Parágrafo com título}
-\end{lstlisting}
+\end{teX}
 
 \section{Listas:}
 
 \subsection{Listas Não Ordenadas:}
 O ambiente \texttt{itemize} é utilizado para criar listas não ordenadas, conforme o exemplo abaixo:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{itemize}
 		\item Primeiro itemLaTeX
 		\item Segundo item
 		\item Terceiro item
 	\end{itemize}
-\end{lstlisting}
+\end{teX}
 
 
 \begin{itemize}
@@ -369,13 +440,13 @@ O ambiente \texttt{itemize} é utilizado para criar listas não ordenadas, confo
 \subsection{Listas Ordenadas:}
 O ambiente \texttt{enumerate} é utilizado para criar listas ordenadas, nas quais os itens são numerados automaticamente, conforme o exemplo abaixo:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{enumerate}
 		\item Primeiro item
 		\item Segundo item
 		\item Terceiro item
 	\end{enumerate}
-\end{lstlisting}
+\end{teX}
 
 \begin{enumerate}
 	\item Este é o primeiro item da lista
@@ -395,17 +466,17 @@ Agora, vamos elaborar sobre as formatações mais usadas:
 
 Para tornar o texto em \textbf{negrito}, basta encapsular uma palavra com a macro \texttt{$\backslash$textbf\{\}.}
 
-\begin{lstlisting}
+\begin{teX}
 	\textbf{texto em negrito.}
-\end{lstlisting}
+\end{teX}
 
 \subsection{Texto em Itálico:}
 
 Para tornar o texto em \textit{itálico}, basta encapsular uma palavra com a macro \texttt{$\backslash$textit\{\}.}
 
-\begin{lstlisting}
+\begin{teX}
 	\textit{texto em itálico.}
-\end{lstlisting}
+\end{teX}
 
 \subsection{Texto Técnico:}
 
@@ -413,9 +484,9 @@ Existe também uma opção para formatar o texto em um formato \texttt{técnico}
 
 Isso é feito através da macro \texttt{$\backslash$texttt\{\}}
 
-\begin{lstlisting}
+\begin{teX}
 	\texttt{texto técnico.}
-\end{lstlisting}
+\end{teX}
 
 \subsubsection{Estilização Múltipla:}
 
@@ -423,15 +494,15 @@ Caso seja necessário, é possível misturar esses elementos. Por exemplo, \text
 
 Ou seja, fazer algo conforme o exemplo abaixo:
 
-\begin{lstlisting}
+\begin{teX}
 	\textbf{\textit{texto em negrito e em itálico.}}
-\end{lstlisting}
+\end{teX}
 
 A ordem em si em que esses elementos aparecem não importa, \textit{\textbf{então é possível fazer o contrário e obter o mesmo efeito final:}}
 
-\begin{lstlisting}
+\begin{teX}
 	\textit{\textbf{texto em itálico e depois em negrito}}
-\end{lstlisting}
+\end{teX}
 
 
 \section{O Ambiente Matemático:}
@@ -444,9 +515,9 @@ Existem duas formas principais de escrever expressões matemáticas: em linha (i
 
 O modo matemático em linha é utilizado quando a expressão faz parte do texto corrido. Ele é delimitado pelo símbolo \texttt{\$}.
 
-\begin{lstlisting}
+\begin{teX}
 	A área de um quadrado é dada por $A = l^2$.
-\end{lstlisting}
+\end{teX}
 
 O resultado será uma expressão matemática integrada ao texto, sem quebra de linha. Ex: $A = l^2$
 
@@ -458,11 +529,11 @@ Quando a expressão precisa de mais destaque ou ocupa mais espaço, utiliza-se o
 A = l^2
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	A = l^2
 	\]
-\end{lstlisting}
+\end{teX}
 
 
 \subsection{Modo de Equação Numerada:}
@@ -474,12 +545,12 @@ O LaTeX permite criar equações numeradas automaticamente usando o ambiente \te
 	\label{exemplo_1}
 \end{equation}
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{equation}
 		E = mc^2
 		\label{exemplo_1}		
 	\end{equation}
-\end{lstlisting}
+\end{teX}
 
 
 \subsubsection{Referenciando Elementos Numerados:}
@@ -492,18 +563,18 @@ Para criar referências automáticas, usamos: \\
 
 Exemplo com equação:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{equation}
 		E = mc^2
 		\label{eq:energia}
 	\end{equation}
 	
 	Como mostrado na equação~\ref{eq:energia}, ...
-\end{lstlisting}
+\end{teX}
 
 Exemplo com figura:
 
-\begin{lstlisting}
+\begin{teX}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\textwidth]{exemplo.png}
@@ -512,7 +583,7 @@ Exemplo com figura:
 	\end{figure}
 	
 	A figura~\ref{fig:exemplo} ilustra o conceito.
-\end{lstlisting}
+\end{teX}
 
 Dessa forma, os números de equações, figuras e tabelas são atualizados automaticamente caso novos elementos sejam adicionados. Isso evita que você precise renumerar manualmente o documento.
 
@@ -527,11 +598,11 @@ x^2 + y_1
 \]
 
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	x^2 + y_1
 	\]
-\end{lstlisting}
+\end{teX}
 
 
 Quando o expoente ou índice possui mais de um caractere, é necessário utilizar chaves.
@@ -540,11 +611,11 @@ Quando o expoente ou índice possui mais de um caractere, é necessário utiliza
 x^{n+1} + y_{i,j}
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	x^{n+1} + y_{i,j}
 	\]
-\end{lstlisting}
+\end{teX}
 
 
 
@@ -556,11 +627,11 @@ Frações são criadas com o comando \texttt{\textbackslash frac\{\}\{\}}.
 \frac{a}{b}
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	\frac{a}{b}
 	\]
-\end{lstlisting}
+\end{teX}
 
 Também é possível combinar frações com outras operações matemáticas.
 
@@ -568,11 +639,11 @@ Também é possível combinar frações com outras operações matemáticas.
 \frac{x^2 + 1}{x - 1}
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	\frac{x^2 + 1}{x - 1}
 	\]
-\end{lstlisting}
+\end{teX}
 
 \subsection{Raízes:}
 
@@ -582,11 +653,11 @@ A macro \texttt{\textbackslash sqrt\{\}} é utilizada para criar raízes quadrad
 \sqrt{x}
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	\sqrt{x}
 	\]
-\end{lstlisting}
+\end{teX}
 
 Para raízes de ordem diferente de dois, utiliza-se um argumento opcional.
 
@@ -594,35 +665,35 @@ Para raízes de ordem diferente de dois, utiliza-se um argumento opcional.
 \sqrt[3]{x}
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	\sqrt[3]{x}
 	\]
-\end{lstlisting}
+\end{teX}
 
 \subsection{Símbolos Matemáticos Básicos:}
 
-O \LaTeX{} fornece diversos símbolos matemáticos prontos para uso.
+O teX{} fornece diversos símbolos matemáticos prontos para uso.
 
 \[
 \alpha + \beta = \gamma
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	\alpha + \beta = \gamma
 	\]
-\end{lstlisting}
+\end{teX}
 
 \[
 a \leq b \quad c \geq d \quad x \neq y
 \]
 
-\begin{lstlisting}
+\begin{teX}
 	\[
 	a \leq b \quad c \geq d \quad x \neq y
 	\]
-\end{lstlisting}
+\end{teX}
 
 \subsection{Observação Importante:}
 
