@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  7 FEB 2026 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.4)  10 FEB 2026 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,7 +459,7 @@ Package hyperref Info: Link coloring OFF on input line 105.
 \@outlinefile=\write3
 \openout3 = `aula-2.out'.
 
-<IMAGENS/LOGO.png, id=72, 569.4876pt x 569.2467pt>
+<IMAGENS/LOGO.png, id=68, 569.4876pt x 569.2467pt>
 File: IMAGENS/LOGO.png Graphic file (type png)
 <use IMAGENS/LOGO.png>
 Package pdftex.def Info: IMAGENS/LOGO.png  used on input line 107.
@@ -534,7 +534,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 216.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 215.
 
 
 [3]
@@ -543,7 +543,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 
 [5]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 371.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 370.
 
 
 [6]
@@ -554,13 +554,13 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `aula-2.out' has not changed.
-(rerunfilecheck)             Checksum: D45A39822E22055B6F75F4C0C435931A;2815.
+(rerunfilecheck)             Checksum: 4DCDF09B33130BA84AAB142B750D547D;2582.
  ) 
 Here is how much of TeX's memory you used:
- 14580 strings out of 473190
- 229379 string characters out of 5722594
- 803714 words of memory out of 5000000
- 37470 multiletter control sequences out of 15000+600000
+ 14578 strings out of 473190
+ 229359 string characters out of 5722594
+ 803719 words of memory out of 5000000
+ 37469 multiletter control sequences out of 15000+600000
  615635 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1003b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -571,10 +571,10 @@ exmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr
 /share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts
 /type1/public/lm/lmtt9.pfb>
-Output written on aula-2.pdf (8 pages, 321665 bytes).
+Output written on aula-2.pdf (8 pages, 318192 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 34958 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 34950 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -12,7 +12,6 @@
 \contentsline {section}{\numberline {4}Formatação Avançada}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Formatando em ABNT}{6}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Classe \texttt {abntex2}}{6}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Observações Importantes}{6}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2}Observação Importante}{6}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Formatando em SBC}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Arquivos \texttt {.sty}}{6}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Resolvendo Problemas do Compilador}{7}{section.5}%
